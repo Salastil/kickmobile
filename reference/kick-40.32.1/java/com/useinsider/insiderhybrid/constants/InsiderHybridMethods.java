@@ -1,0 +1,65 @@
+package com.useinsider.insiderhybrid.constants;
+
+/* JADX INFO: compiled from: r8-map-id-8a1c41283db52d6403eea27da9125d0c7af3cbca81829c3b5167d2377934d1b7 */
+/* JADX INFO: loaded from: classes9.dex */
+public class InsiderHybridMethods {
+    public static final String ADD_EMAIL = "addEmail";
+    public static final String ADD_PHONE_NUMBER = "addPhoneNumber";
+    public static final String ADD_USER_ID = "addUserID";
+    public static final String CART_CLEARED = "cartCleared";
+    public static final String CLICK_SMART_RECOMMENDATION_PRODUCT = "clickSmartRecommendationProduct";
+    public static final String DATE_TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+    public static final String ENABLE_CARRIER_COLLECTION = "enableCarrierCollection";
+    public static final String ENABLE_IP_COLLECTION = "enableIpCollection";
+    public static final String ENABLE_LOCATION_COLLECTION = "enableLocationCollection";
+    public static final String GET_CONTENT_BOOL_WITH_NAME = "getContentBoolWithName";
+    public static final String GET_CONTENT_INT_WITH_NAME = "getContentIntWithName";
+    public static final String GET_CONTENT_STRING_WITH_NAME = "getContentStringWithName";
+    public static final String GET_MESSAGE_CENTER_DATA = "getMessageCenterData";
+    public static final String GET_SMART_RECOMMENDATION = "getSmartRecommendation";
+    public static final String GET_SMART_RECOMMENDATION_WITH_PRODUCT = "getSmartRecommendationWithProduct";
+    public static final String HANDLE_NOTIFICATION = "handleNotification";
+    public static final String HYBRID_INTENT = "hybridIntent";
+    public static final String INIT_WITH_CUSTOM_ENDPOINT = "initWithCustomEndpoint";
+    public static final String INIT_WITH_LAUNCH_OPTIONS = "initWithLaunchOptions";
+    public static final String ITEM_ADDED_TO_CART = "itemAddedToCart";
+    public static final String ITEM_PURCHASED = "itemPurchased";
+    public static final String ITEM_REMOVED_FROM_CART = "itemRemovedFromCart";
+    public static final String LOGIN = "login";
+    public static final String LOGOUT = "logout";
+    public static final String PRODUCTS = "products";
+    public static final String PRODUCT_MUST_MAP = "productMustMap";
+    public static final String PRODUCT_OPT_MAP = "productOptMap";
+    public static final String PUT_EXCEPTION = "putException";
+    public static final String REGISTER_WITH_QUIET_PERMISSION = "registerWithQuietPermission";
+    public static final String REMOVE_INAPP = "removeInapp";
+    public static final String SET_AGE = "setAge";
+    public static final String SET_BIRTHDAY = "setBirthday";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_ARRAY = "setCustomAttributeWithArray";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_BOOLEAN = "setCustomAttributeWithBoolean";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_DATE = "setCustomAttributeWithDate";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_DOUBLE = "setCustomAttributeWithDouble";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_INT = "setCustomAttributeWithInt";
+    public static final String SET_CUSTOM_ATTRIBUTE_WITH_STRING = "setCustomAttributeWithString";
+    public static final String SET_CUSTOM_ENDPOINT = "setCustomEndpoint";
+    public static final String SET_EMAIL_OPTIN = "setEmailOptin";
+    public static final String SET_FACEBOOK_ID = "setFacebookID";
+    public static final String SET_GDPR_CONSENT = "setGDPRConsent";
+    public static final String SET_GENDER = "setGender";
+    public static final String SET_LANGUAGE = "setLanguage";
+    public static final String SET_LOCALE = "setLocale";
+    public static final String SET_LOCATION_OPTIN = "setLocationOptin";
+    public static final String SET_NAME = "setName";
+    public static final String SET_PUSH_OPTIN = "setPushOptin";
+    public static final String SET_SMS_OPTIN = "setSMSOptin";
+    public static final String SET_SURNAME = "setSurname";
+    public static final String SET_TWITTER_ID = "setTwitterID";
+    public static final String SET_WHATSAPP_OPTIN = "setWhatsappOptin";
+    public static final String START_TRACKING_GEOFENCE = "startTrackingGeofence";
+    public static final String TAG_EVENT = "tagEvent";
+    public static final String UNSET_CUSTOM_ATTRIBUTE = "unsetCustomAttribute";
+    public static final String VISIT_CART_PAGE = "visitCartPage";
+    public static final String VISIT_HOME_PAGE = "visitHomePage";
+    public static final String VISIT_LISTING_PAGE = "visitListingPage";
+    public static final String VISIT_PRODUCT_DETAIL_PAGE = "visitProductDetailPage";
+}

@@ -1,0 +1,13 @@
+package com.useinsider.insider;
+
+/* JADX INFO: compiled from: r8-map-id-98dd394663796e8b14f67757bb11d0a7eddfe51029f02e3b44a26a02cd1a9e7a */
+/* JADX INFO: loaded from: classes9.dex */
+public interface t3 {
+    void a(String str);
+
+    void a(String str, Runnable runnable, long j);
+
+    void b();
+
+    boolean b(String str);
+}

@@ -1,0 +1,26 @@
+package io.github.expo.modules.v2.types;
+
+import io.github.expo.modules.v2.converters.BoxedLongConverter;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+
+/* JADX INFO: compiled from: TypeConverterRegistry.kt */
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+final /* synthetic */ class TypeConverterRegistry$simpleConvertersCache$1$3 extends FunctionReferenceImpl implements Function1<Boolean, BoxedLongConverter> {
+    public static final TypeConverterRegistry$simpleConvertersCache$1$3 INSTANCE = new TypeConverterRegistry$simpleConvertersCache$1$3();
+
+    TypeConverterRegistry$simpleConvertersCache$1$3() {
+        super(1, BoxedLongConverter.class, "<init>", "<init>(Z)V", 0);
+    }
+
+    public final BoxedLongConverter invoke(boolean z) {
+        return new BoxedLongConverter(z);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ BoxedLongConverter invoke(Boolean bool) {
+        return invoke(bool.booleanValue());
+    }
+}

@@ -1,0 +1,30 @@
+package com.google.android.gms.cast.framework.media.uicontroller;
+
+import com.google.android.gms.cast.framework.media.widget.CastSeekBar;
+import java.util.Objects;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cast-framework@@22.2.0 */
+/* JADX INFO: loaded from: classes7.dex */
+final class zzh extends com.google.android.gms.cast.framework.media.widget.zzd {
+    final /* synthetic */ UIMediaController zza;
+
+    zzh(UIMediaController uIMediaController) {
+        Objects.requireNonNull(uIMediaController);
+        this.zza = uIMediaController;
+    }
+
+    @Override // com.google.android.gms.cast.framework.media.widget.zzd
+    public final void zza(CastSeekBar castSeekBar) {
+        this.zza.zzc(castSeekBar);
+    }
+
+    @Override // com.google.android.gms.cast.framework.media.widget.zzd
+    public final void zzb(CastSeekBar castSeekBar) {
+        this.zza.zzd(castSeekBar);
+    }
+
+    @Override // com.google.android.gms.cast.framework.media.widget.zzd
+    public final void zzc(CastSeekBar castSeekBar, int i, boolean z) {
+        this.zza.zze(castSeekBar, i, z);
+    }
+}

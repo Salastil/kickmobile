@@ -1,0 +1,21 @@
+package androidx.core.view.autofill;
+
+import android.view.autofill.AutofillId;
+import androidx.compose.ui.text.android.Paint29$$ExternalSyntheticApiModelOutline0;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class AutofillIdCompat {
+    private final Object mWrappedObj;
+
+    private AutofillIdCompat(AutofillId autofillId) {
+        this.mWrappedObj = autofillId;
+    }
+
+    public static AutofillIdCompat toAutofillIdCompat(AutofillId autofillId) {
+        return new AutofillIdCompat(autofillId);
+    }
+
+    public AutofillId toAutofillId() {
+        return Paint29$$ExternalSyntheticApiModelOutline0.m9648m(this.mWrappedObj);
+    }
+}

@@ -1,0 +1,117 @@
+package com.pusher.client.example;
+
+import com.pusher.client.Pusher;
+import com.pusher.client.PusherOptions;
+import com.pusher.client.channel.PresenceChannel;
+import com.pusher.client.channel.PresenceChannelEventListener;
+import com.pusher.client.channel.PusherEvent;
+import com.pusher.client.channel.User;
+import com.pusher.client.connection.ConnectionEventListener;
+import com.pusher.client.connection.ConnectionState;
+import com.pusher.client.connection.ConnectionStateChange;
+import com.pusher.client.util.HttpChannelAuthorizer;
+import java.util.Set;
+import org.koin.core.instance.InstanceFactory;
+
+/* JADX INFO: loaded from: classes8.dex */
+public class PresenceChannelExampleApp {
+    private final PresenceChannel channel;
+    private final String channelAuthorizationEndpoint = "http://localhost:3030/pusher/auth";
+    private String channelName;
+    private String channelsKey;
+    private String cluster;
+    private String eventName;
+
+    public static void main(String[] strArr) {
+        new PresenceChannelExampleApp(strArr);
+    }
+
+    /* JADX INFO: Infinite loop detected, blocks: 22, insns: 0 */
+    private PresenceChannelExampleApp(String[] strArr) {
+        this.channelsKey = "FILL_ME_IN";
+        this.channelName = "my-channel";
+        this.eventName = "my-event";
+        this.cluster = "eu";
+        int length = strArr.length;
+        if (length != 1) {
+            if (length != 2) {
+                if (length != 3) {
+                    if (length == 4) {
+                        this.cluster = strArr[3];
+                    }
+                }
+                this.eventName = strArr[2];
+            }
+            this.channelName = strArr[1];
+            this.channelsKey = strArr[0];
+        } else {
+            this.channelsKey = strArr[0];
+        }
+        Pusher pusher = new Pusher(this.channelsKey, new PusherOptions().setUseTLS(true).setCluster(this.cluster).setChannelAuthorizer(new HttpChannelAuthorizer("http://localhost:3030/pusher/auth")));
+        pusher.connect(new ConnectionEventListener() { // from class: com.pusher.client.example.PresenceChannelExampleApp.1
+            @Override // com.pusher.client.connection.ConnectionEventListener
+            public void onConnectionStateChange(ConnectionStateChange connectionStateChange) {
+                System.out.printf("Connection state changed from [%s] to [%s]%n", connectionStateChange.getPreviousState(), connectionStateChange.getCurrentState());
+            }
+
+            @Override // com.pusher.client.connection.ConnectionEventListener
+            public void onError(String str, String str2, Exception exc) {
+                System.out.printf("An error was received with message [%s], code [%s], exception [%s]%n", str, str2, exc);
+            }
+        }, new ConnectionState[0]);
+        this.channel = pusher.subscribePresence(this.channelName, new PresenceChannelEventListener() { // from class: com.pusher.client.example.PresenceChannelExampleApp.2
+            @Override // com.pusher.client.channel.ChannelEventListener
+            public void onSubscriptionSucceeded(String str) {
+                System.out.printf("Subscription to channel [%s] succeeded%n", str);
+            }
+
+            @Override // com.pusher.client.channel.SubscriptionEventListener
+            public void onEvent(PusherEvent pusherEvent) {
+                System.out.printf("Received event [%s]%n", pusherEvent.toString());
+            }
+
+            @Override // com.pusher.client.channel.PrivateChannelEventListener
+            public void onAuthenticationFailure(String str, Exception exc) {
+                System.out.printf("Authorization failure due to [%s], exception was [%s]%n", str, exc);
+            }
+
+            @Override // com.pusher.client.channel.PresenceChannelEventListener
+            public void onUsersInformationReceived(String str, Set<User> set) {
+                System.out.println("Received user information");
+                PresenceChannelExampleApp.this.printCurrentlySubscribedUsers();
+            }
+
+            @Override // com.pusher.client.channel.PresenceChannelEventListener
+            public void userSubscribed(String str, User user) {
+                System.out.printf("A new user has joined channel [%s]: %s%n", str, user.toString());
+                PresenceChannelExampleApp.this.printCurrentlySubscribedUsers();
+            }
+
+            @Override // com.pusher.client.channel.PresenceChannelEventListener
+            public void userUnsubscribed(String str, User user) {
+                System.out.printf("A user has left channel [%s]: %s%n", str, user);
+                PresenceChannelExampleApp.this.printCurrentlySubscribedUsers();
+            }
+        }, this.eventName);
+        while (true) {
+            try {
+                Thread.sleep(1000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void printCurrentlySubscribedUsers() {
+        StringBuilder sb = new StringBuilder("Users now subscribed to the channel:");
+        for (User user : this.channel.getUsers()) {
+            sb.append(InstanceFactory.ERROR_SEPARATOR);
+            sb.append(user.toString());
+            if (user.equals(this.channel.getMe())) {
+                sb.append(" (me)");
+            }
+        }
+        System.out.println(sb);
+    }
+}

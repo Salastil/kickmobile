@@ -1,0 +1,29 @@
+package com.google.android.gms.internal.mlkit_vision_document_scanner;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import java.util.Objects;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-mlkit-document-scanner@@16.0.0-beta1 */
+/* JADX INFO: loaded from: classes7.dex */
+final class zzal extends zzad {
+    private final transient Object[] zza;
+    private final transient int zzb;
+    private final transient int zzc;
+
+    zzal(Object[] objArr, int i, int i2) {
+        this.zza = objArr;
+        this.zzb = i;
+        this.zzc = i2;
+    }
+
+    @Override // java.util.List
+    public final Object get(int i) {
+        zzt.zza(i, this.zzc, FirebaseAnalytics.Param.INDEX);
+        return Objects.requireNonNull(this.zza[i + i + this.zzb]);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.zzc;
+    }
+}

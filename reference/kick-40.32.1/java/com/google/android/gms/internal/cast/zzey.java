@@ -1,0 +1,20 @@
+package com.google.android.gms.internal.cast;
+
+import android.os.IInterface;
+import android.os.RemoteException;
+import android.view.Surface;
+import com.google.android.gms.common.api.ApiMetadata;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cast@@22.2.0 */
+/* JADX INFO: loaded from: classes7.dex */
+public interface zzey extends IInterface {
+    void zzb(int i, int i2, Surface surface, ApiMetadata apiMetadata) throws RemoteException;
+
+    void zzc(ApiMetadata apiMetadata) throws RemoteException;
+
+    void zzd(int i, ApiMetadata apiMetadata) throws RemoteException;
+
+    void zze(boolean z, ApiMetadata apiMetadata) throws RemoteException;
+
+    void zzf(ApiMetadata apiMetadata) throws RemoteException;
+}

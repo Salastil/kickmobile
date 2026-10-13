@@ -1,0 +1,22 @@
+package com.google.android.gms.cast.framework.media.uicontroller;
+
+import android.view.View;
+import java.util.Objects;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cast-framework@@22.2.0 */
+/* JADX INFO: loaded from: classes7.dex */
+final class zzg implements View.OnClickListener {
+    final /* synthetic */ long zza;
+    final /* synthetic */ UIMediaController zzb;
+
+    zzg(UIMediaController uIMediaController, long j) {
+        this.zza = j;
+        Objects.requireNonNull(uIMediaController);
+        this.zzb = uIMediaController;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        this.zzb.onRewindClicked(view, this.zza);
+    }
+}

@@ -1,0 +1,12 @@
+package org.bouncycastle.pqc.crypto.slhdsa;
+
+/* JADX INFO: loaded from: classes11.dex */
+class NodeEntry {
+    final int nodeHeight;
+    final byte[] nodeValue;
+
+    NodeEntry(byte[] bArr, int i) {
+        this.nodeValue = bArr;
+        this.nodeHeight = i;
+    }
+}

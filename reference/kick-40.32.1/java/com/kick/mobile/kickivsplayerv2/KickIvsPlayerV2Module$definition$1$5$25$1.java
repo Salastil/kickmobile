@@ -1,0 +1,59 @@
+package com.kick.mobile.kickivsplayerv2;
+
+import expo.modules.kotlin.Promise;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* JADX INFO: compiled from: KickIvsPlayerV2Module.kt */
+/* JADX INFO: loaded from: classes8.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 3, 0}, xi = 48)
+@DebugMetadata(c = "com.kick.mobile.kickivsplayerv2.KickIvsPlayerV2Module$definition$1$5$25$1", f = "KickIvsPlayerV2Module.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, nl = {}, s = {}, v = 2)
+final class KickIvsPlayerV2Module$definition$1$5$25$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ MuxAnalyticsViewConfig $config;
+    final /* synthetic */ Promise $promise;
+    final /* synthetic */ KickIvsPlayerV2View $view;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    KickIvsPlayerV2Module$definition$1$5$25$1(KickIvsPlayerV2View kickIvsPlayerV2View, MuxAnalyticsViewConfig muxAnalyticsViewConfig, Promise promise, Continuation<? super KickIvsPlayerV2Module$definition$1$5$25$1> continuation) {
+        super(2, continuation);
+        this.$view = kickIvsPlayerV2View;
+        this.$config = muxAnalyticsViewConfig;
+        this.$promise = promise;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+        return new KickIvsPlayerV2Module$definition$1$5$25$1(this.$view, this.$config, this.$promise, continuation);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
+        return ((KickIvsPlayerV2Module$definition$1$5$25$1) create(coroutineScope, continuation)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        ResultKt.throwOnFailure(obj);
+        KickIvsPlayerV2View kickIvsPlayerV2View = this.$view;
+        MuxAnalyticsViewConfig muxAnalyticsViewConfig = this.$config;
+        String environmentKey = muxAnalyticsViewConfig != null ? muxAnalyticsViewConfig.getEnvironmentKey() : null;
+        MuxAnalyticsViewConfig muxAnalyticsViewConfig2 = this.$config;
+        String metadata = muxAnalyticsViewConfig2 != null ? muxAnalyticsViewConfig2.getMetadata() : null;
+        MuxAnalyticsViewConfig muxAnalyticsViewConfig3 = this.$config;
+        kickIvsPlayerV2View.setMuxAnalyticsConfig(environmentKey, metadata, muxAnalyticsViewConfig3 != null ? muxAnalyticsViewConfig3.getPlaybackMode() : null);
+        this.$promise.resolve();
+        return Unit.INSTANCE;
+    }
+}

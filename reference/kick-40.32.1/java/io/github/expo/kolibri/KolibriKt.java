@@ -1,0 +1,10 @@
+package io.github.expo.kolibri;
+
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: Kolibri.kt */
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u000e\n\u0000\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082T¢\u0006\u0002\n\u0000¨\u0006\u0002"}, d2 = {"LIBRARY_NAME", "", "runtime"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class KolibriKt {
+    private static final String LIBRARY_NAME = "expo-kolibri";
+}

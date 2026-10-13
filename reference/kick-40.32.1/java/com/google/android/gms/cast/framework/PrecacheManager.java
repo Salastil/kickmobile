@@ -1,0 +1,42 @@
+package com.google.android.gms.cast.framework;
+
+import com.google.android.gms.cast.framework.media.RemoteMediaClient;
+import com.google.android.gms.cast.internal.Logger;
+import com.google.android.gms.internal.cast.zzpm;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cast-framework@@22.2.0 */
+/* JADX INFO: loaded from: classes7.dex */
+public class PrecacheManager {
+    private final Logger zza = new Logger("PrecacheManager");
+    private final CastOptions zzb;
+    private final SessionManager zzc;
+    private final com.google.android.gms.cast.internal.zzn zzd;
+
+    public PrecacheManager(CastOptions castOptions, SessionManager sessionManager, com.google.android.gms.cast.internal.zzn zznVar) {
+        this.zzb = castOptions;
+        this.zzc = sessionManager;
+        this.zzd = zznVar;
+    }
+
+    public void precache(String str) {
+        com.google.android.gms.internal.cast.zzr.zzb(zzpm.PRECACHE);
+        Session currentSession = this.zzc.getCurrentSession();
+        if (str == null) {
+            throw new IllegalArgumentException("No precache data found to be precached");
+        }
+        if (currentSession == null) {
+            this.zzd.zza(new String[]{this.zzb.getReceiverApplicationId()}, str, null);
+            return;
+        }
+        if (!(currentSession instanceof CastSession)) {
+            this.zza.e("Current session is not a CastSession. Precache is not supported.", new Object[0]);
+            return;
+        }
+        RemoteMediaClient remoteMediaClient = ((CastSession) currentSession).getRemoteMediaClient();
+        if (remoteMediaClient != null) {
+            remoteMediaClient.zzh(str, null);
+        } else {
+            this.zza.e("Failed to get RemoteMediaClient from current cast session.", new Object[0]);
+        }
+    }
+}

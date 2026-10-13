@@ -1,0 +1,34 @@
+package com.google.android.gms.internal.play_billing;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import java.util.Objects;
+
+/* JADX INFO: compiled from: com.android.billingclient:billing@@9.1.0 */
+/* JADX INFO: loaded from: classes7.dex */
+final class zzcn extends zzca {
+    private final transient Object[] zza;
+    private final transient int zzb;
+    private final transient int zzc;
+
+    zzcn(Object[] objArr, int i, int i2) {
+        this.zza = objArr;
+        this.zzb = i;
+        this.zzc = i2;
+    }
+
+    @Override // java.util.List
+    public final Object get(int i) {
+        zzbl.zza(i, this.zzc, FirebaseAnalytics.Param.INDEX);
+        return Objects.requireNonNull(this.zza[i + i + this.zzb]);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
+    public final int size() {
+        return this.zzc;
+    }
+
+    @Override // com.google.android.gms.internal.play_billing.zzbx
+    final boolean zzf() {
+        return true;
+    }
+}

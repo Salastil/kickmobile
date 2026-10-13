@@ -1,0 +1,41 @@
+package org.bouncycastle.asn1;
+
+import androidx.collection.SieveCacheKt;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.FileChannel;
+
+/* JADX INFO: loaded from: classes10.dex */
+class StreamUtil {
+    StreamUtil() {
+    }
+
+    static int findLimit(InputStream inputStream) {
+        if (inputStream instanceof LimitedInputStream) {
+            return ((LimitedInputStream) inputStream).getLimit();
+        }
+        if (inputStream instanceof ASN1InputStream) {
+            return ((ASN1InputStream) inputStream).getLimit();
+        }
+        if (inputStream instanceof ByteArrayInputStream) {
+            return ((ByteArrayInputStream) inputStream).available();
+        }
+        if (inputStream instanceof FileInputStream) {
+            try {
+                FileChannel channel = ((FileInputStream) inputStream).getChannel();
+                long size = channel != null ? channel.size() : 2147483647L;
+                if (size < SieveCacheKt.NodeLinkMask) {
+                    return (int) size;
+                }
+            } catch (IOException unused) {
+            }
+        }
+        long jMaxMemory = Runtime.getRuntime().maxMemory();
+        if (jMaxMemory > SieveCacheKt.NodeLinkMask) {
+            return Integer.MAX_VALUE;
+        }
+        return (int) jMaxMemory;
+    }
+}
