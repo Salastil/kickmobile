@@ -103,6 +103,15 @@ Hosts: `https://mobile.kick.com` (API), `https://chat.mobile.kick.com` (chat; an
 `https://mobile.flags.kick.com` (feature flags), `https://search.kick.com`, `https://files.kick.com`,
 `https://files.cdn.kick.com`, `https://clips.kick.com`, `https://ext.kick.com`.
 
+## Correction / lead: Centrifugo is a second realtime transport
+
+The app also ships a Kick-written native module `Kickcentrifugo` (`reference/kick-40.32.1/java/com/kick/centrifugo/`) wrapping
+`io.github.centrifugal.centrifuge`. It takes `connectionUrl`, `connectionAuthUrl`, `channelAuthUrl` (+ headers) and emits
+`onConnecting/onConnected/onDisconnected/onClientSubscribed/onClientPublication/onClientJoin/onClientLeave/onClientError`.
+The `/api/v1/realtime/auth/connection` and `/api/v1/realtime/auth/channel` endpoints noted above for the Pusher authorizer may in fact
+serve Centrifugo; which transport carries chat messages (Pusher, Centrifugo, or both during a migration) is **unconfirmed** and is the
+first thing to settle before comparing nobilis. See also `reference/kick-40.32.1/DEPENDENCIES.md` (native libs are all third-party).
+
 ## Not yet done
 
 - Compare against the nobilis chat implementation (not in this repo yet).

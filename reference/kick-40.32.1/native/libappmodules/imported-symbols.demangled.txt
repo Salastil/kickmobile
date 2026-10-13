@@ -1,0 +1,438 @@
+U VTT for facebook::react::ClippingScrollViewDecoratorViewProps
+U VTT for facebook::react::HostPlatformViewProps
+U VTT for facebook::react::KeyboardBackgroundViewProps
+U VTT for facebook::react::KeyboardControllerViewProps
+U VTT for facebook::react::KeyboardGestureAreaProps
+U VTT for facebook::react::KeyboardToolbarGroupViewProps
+U VTT for facebook::react::OverKeyboardViewProps
+U VTT for facebook::react::RNCSafeAreaProviderProps
+U VTT for facebook::react::RNCSafeAreaViewProps
+U VTT for facebook::react::RNGestureHandlerDetectorProps
+U VTT for facebook::react::RNSFormSheetHostProps
+U VTT for facebook::react::RNSFullWindowOverlayProps
+U VTT for facebook::react::RNSSafeAreaViewProps
+U VTT for facebook::react::RNSScreenContainerProps
+U VTT for facebook::react::RNSScreenContentWrapperProps
+U VTT for facebook::react::RNSScreenFooterProps
+U VTT for facebook::react::RNSScreenNavigationContainerProps
+U VTT for facebook::react::RNSScreenProps
+U VTT for facebook::react::RNSScreenStackHeaderConfigProps
+U VTT for facebook::react::RNSScreenStackHeaderSubviewProps
+U VTT for facebook::react::RNSScreenStackProps
+U VTT for facebook::react::RNSSearchBarProps
+U VTT for facebook::react::RNSStackHeaderConfigAndroidProps
+U VTT for facebook::react::RNSStackHeaderSubviewAndroidProps
+U VTT for facebook::react::RNSStackScreenProps
+U VTT for facebook::react::RNSTabsHostAndroidProps
+U VTT for facebook::react::RNSVGCircleProps
+U VTT for facebook::react::RNSVGClipPathProps
+U VTT for facebook::react::RNSVGDefsProps
+U VTT for facebook::react::RNSVGEllipseProps
+U VTT for facebook::react::RNSVGFeBlendProps
+U VTT for facebook::react::RNSVGFeColorMatrixProps
+U VTT for facebook::react::RNSVGFeCompositeProps
+U VTT for facebook::react::RNSVGFeFloodProps
+U VTT for facebook::react::RNSVGFeGaussianBlurProps
+U VTT for facebook::react::RNSVGFeMergeProps
+U VTT for facebook::react::RNSVGFeOffsetProps
+U VTT for facebook::react::RNSVGFilterProps
+U VTT for facebook::react::RNSVGForeignObjectProps
+U VTT for facebook::react::RNSVGGroupProps
+U VTT for facebook::react::RNSVGImageProps
+U VTT for facebook::react::RNSVGLineProps
+U VTT for facebook::react::RNSVGLinearGradientProps
+U VTT for facebook::react::RNSVGMarkerProps
+U VTT for facebook::react::RNSVGMaskProps
+U VTT for facebook::react::RNSVGPathProps
+U VTT for facebook::react::RNSVGPatternProps
+U VTT for facebook::react::RNSVGRadialGradientProps
+U VTT for facebook::react::RNSVGRectProps
+U VTT for facebook::react::RNSVGSvgViewAndroidProps
+U VTT for facebook::react::RNSVGSymbolProps
+U VTT for facebook::react::RNSVGTSpanProps
+U VTT for facebook::react::RNSVGTextPathProps
+U VTT for facebook::react::RNSVGTextProps
+U VTT for facebook::react::RNSVGUseProps
+U __cxa_allocate_exception
+U __cxa_atexit@LIBC
+U __cxa_begin_catch
+U __cxa_end_catch
+U __cxa_finalize@LIBC
+U __cxa_free_exception
+U __cxa_guard_abort
+U __cxa_guard_acquire
+U __cxa_guard_release
+U __cxa_pure_virtual
+U __cxa_throw
+U __gxx_personality_v0
+U __register_atfork@LIBC
+U __sF@LIBC
+U __stack_chk_fail@LIBC
+U __strlen_chk@LIBC
+U __system_property_get@LIBC
+U abort@LIBC
+U dl_iterate_phdr@LIBC
+U double_conversion::DoubleToStringConverter::ToShortestIeeeNumber(double, double_conversion::StringBuilder*, double_conversion::DoubleToStringConverter::DtoaMode) const
+U facebook::jni::initialize(_JavaVM*, std::__ndk1::function<void ()>&&)
+U facebook::jsi::HostObject::set(facebook::jsi::Runtime&, facebook::jsi::PropNameID const&, facebook::jsi::Value const&)
+U facebook::jsi::NativeState::~NativeState()
+U facebook::jsi::Value::Value(facebook::jsi::IRuntime&, facebook::jsi::Value const&)
+U facebook::jsi::Value::Value(facebook::jsi::Value&&)
+U facebook::jsi::Value::asBool() const
+U facebook::jsi::Value::asNumber() const
+U facebook::jsi::Value::asObject(facebook::jsi::IRuntime&) &&
+U facebook::jsi::Value::asString(facebook::jsi::IRuntime&) const &
+U facebook::jsi::Value::~Value()
+U facebook::jsi::Value::~Value()
+U facebook::react::BaseViewProps::resolveTransform(facebook::react::LayoutMetrics const&) const
+U facebook::react::ClippingScrollViewDecoratorViewComponentName
+U facebook::react::ClippingScrollViewDecoratorViewProps::ClippingScrollViewDecoratorViewProps(facebook::react::PropsParserContext const&, facebook::react::ClippingScrollViewDecoratorViewProps const&, facebook::react::RawProps const&)
+U facebook::react::ComponentDescriptor::ComponentDescriptor(facebook::react::ComponentDescriptorParameters const&, facebook::react::RawPropsParser&&)
+U facebook::react::ComponentDescriptorProviderRegistry::add(facebook::react::ComponentDescriptorProvider const&) const
+U facebook::react::DefaultComponentsRegistry::registerComponentDescriptorsFromEntryPoint
+U facebook::react::DefaultTurboModuleManagerDelegate::cxxModuleProvider
+U facebook::react::DefaultTurboModuleManagerDelegate::javaModuleProvider
+U facebook::react::EventEmitter::EventEmitter(std::__ndk1::shared_ptr<facebook::react::EventTarget>, std::__ndk1::weak_ptr<facebook::react::EventDispatcher const>)
+U facebook::react::EventEmitter::dispatchEvent(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >, std::__ndk1::function<facebook::jsi::Value (facebook::jsi::Runtime&)> const&, facebook::react::RawEvent::Category) const
+U facebook::react::EventEmitter::setShadowNodeFamily(std::__ndk1::weak_ptr<facebook::react::ShadowNodeFamily const>)
+U facebook::react::EventTarget::EventTarget(std::__ndk1::shared_ptr<facebook::react::InstanceHandle const>, int)
+U facebook::react::FBReactNativeSpec_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::HostPlatformViewProps::HostPlatformViewProps(facebook::react::PropsParserContext const&, facebook::react::HostPlatformViewProps const&, facebook::react::RawProps const&, std::__ndk1::function<bool (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)> const&)
+U facebook::react::HostPlatformViewProps::getDiffProps(facebook::react::Props const*) const
+U facebook::react::HostPlatformViewProps::getDiffPropsImplementationTarget() const
+U facebook::react::ImageManager::ImageManager(std::__ndk1::shared_ptr<facebook::react::ContextContainer const> const&)
+U facebook::react::ImageRequest::ImageRequest(facebook::react::ImageSource, std::__ndk1::shared_ptr<facebook::react::ImageTelemetry const>, facebook::react::SharedFunction<>, facebook::react::SharedFunction<>)
+U facebook::react::JavaTurboModule::JavaTurboModule(facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::JavaTurboModule::invokeJavaMethod(facebook::jsi::Runtime&, facebook::react::TurboModuleMethodValueKind, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::jsi::Value const*, unsigned long, _jmethodID*&)
+U facebook::react::JavaTurboModule::~JavaTurboModule()
+U facebook::react::KeyboardBackgroundViewComponentName
+U facebook::react::KeyboardBackgroundViewProps::KeyboardBackgroundViewProps(facebook::react::PropsParserContext const&, facebook::react::KeyboardBackgroundViewProps const&, facebook::react::RawProps const&)
+U facebook::react::KeyboardControllerViewComponentName
+U facebook::react::KeyboardControllerViewProps::KeyboardControllerViewProps(facebook::react::PropsParserContext const&, facebook::react::KeyboardControllerViewProps const&, facebook::react::RawProps const&)
+U facebook::react::KeyboardGestureAreaComponentName
+U facebook::react::KeyboardGestureAreaProps::KeyboardGestureAreaProps(facebook::react::PropsParserContext const&, facebook::react::KeyboardGestureAreaProps const&, facebook::react::RawProps const&)
+U facebook::react::KeyboardToolbarGroupViewComponentName
+U facebook::react::KeyboardToolbarGroupViewProps::KeyboardToolbarGroupViewProps(facebook::react::PropsParserContext const&, facebook::react::KeyboardToolbarGroupViewProps const&, facebook::react::RawProps const&)
+U facebook::react::LayoutableShadowNode::baseline(facebook::react::LayoutContext const&, facebook::react::Size) const
+U facebook::react::LayoutableShadowNode::getContentOriginOffset(bool) const
+U facebook::react::LayoutableShadowNode::getLayoutMetrics() const
+U facebook::react::LayoutableShadowNode::measure(facebook::react::LayoutContext const&, facebook::react::LayoutConstraints const&) const
+U facebook::react::LayoutableShadowNode::measureContent(facebook::react::LayoutContext const&, facebook::react::LayoutConstraints const&) const
+U facebook::react::LayoutableShadowNode::setLayoutMetrics(facebook::react::LayoutMetrics)
+U facebook::react::MapBufferBuilder::EMPTY()
+U facebook::react::OverKeyboardViewComponentName
+U facebook::react::OverKeyboardViewProps::OverKeyboardViewProps(facebook::react::PropsParserContext const&, facebook::react::OverKeyboardViewProps const&, facebook::react::RawProps const&)
+U facebook::react::OverKeyboardViewState::getDynamic() const
+U facebook::react::Props::getDiffPropsImplementationTarget() const
+U facebook::react::Props::initializeDynamicProps(facebook::react::Props const&, facebook::react::RawProps const&, std::__ndk1::function<bool (std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)> const&)
+U facebook::react::RNCSafeAreaProviderComponentName
+U facebook::react::RNCSafeAreaProviderProps::RNCSafeAreaProviderProps(facebook::react::PropsParserContext const&, facebook::react::RNCSafeAreaProviderProps const&, facebook::react::RawProps const&)
+U facebook::react::RNCSafeAreaViewComponentName
+U facebook::react::RNCSafeAreaViewProps::RNCSafeAreaViewProps(facebook::react::PropsParserContext const&, facebook::react::RNCSafeAreaViewProps const&, facebook::react::RawProps const&)
+U facebook::react::RNCSafeAreaViewShadowNode::adjustLayoutWithState()
+U facebook::react::RNCSafeAreaViewState::getDynamic() const
+U facebook::react::RNGestureHandlerDetectorComponentName
+U facebook::react::RNGestureHandlerDetectorProps::RNGestureHandlerDetectorProps(facebook::react::PropsParserContext const&, facebook::react::RNGestureHandlerDetectorProps const&, facebook::react::RawProps const&)
+U facebook::react::RNGestureHandlerDetectorShadowNode::appendChild(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&)
+U facebook::react::RNGestureHandlerDetectorShadowNode::initialize()
+U facebook::react::RNKC_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::RNSFormSheetHostComponentName
+U facebook::react::RNSFormSheetHostProps::RNSFormSheetHostProps(facebook::react::PropsParserContext const&, facebook::react::RNSFormSheetHostProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSFormSheetHostState::getDynamic() const
+U facebook::react::RNSFullWindowOverlayComponentName
+U facebook::react::RNSFullWindowOverlayProps::RNSFullWindowOverlayProps(facebook::react::PropsParserContext const&, facebook::react::RNSFullWindowOverlayProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSModalScreenComponentName
+U facebook::react::RNSSafeAreaViewComponentName
+U facebook::react::RNSSafeAreaViewProps::RNSSafeAreaViewProps(facebook::react::PropsParserContext const&, facebook::react::RNSSafeAreaViewProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSSafeAreaViewShadowNode::adjustLayoutWithState()
+U facebook::react::RNSSafeAreaViewState::getDynamic() const
+U facebook::react::RNSScreenComponentName
+U facebook::react::RNSScreenContainerComponentName
+U facebook::react::RNSScreenContainerProps::RNSScreenContainerProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenContainerProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenContentWrapperComponentName
+U facebook::react::RNSScreenContentWrapperProps::RNSScreenContentWrapperProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenContentWrapperProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenFooterComponentName
+U facebook::react::RNSScreenFooterProps::RNSScreenFooterProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenFooterProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenNavigationContainerComponentName
+U facebook::react::RNSScreenNavigationContainerProps::RNSScreenNavigationContainerProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenNavigationContainerProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenProps::RNSScreenProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenShadowNode::appendChild(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&)
+U facebook::react::RNSScreenShadowNode::getFrameCorrectionModes()
+U facebook::react::RNSScreenShadowNodeCommitHook::RNSScreenShadowNodeCommitHook(std::__ndk1::shared_ptr<facebook::react::ContextContainer const> const&)
+U facebook::react::RNSScreenStackComponentName
+U facebook::react::RNSScreenStackHeaderConfigComponentName
+U facebook::react::RNSScreenStackHeaderConfigProps::RNSScreenStackHeaderConfigProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenStackHeaderConfigProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenStackHeaderConfigState::getDynamic() const
+U facebook::react::RNSScreenStackHeaderSubviewComponentName
+U facebook::react::RNSScreenStackHeaderSubviewProps::RNSScreenStackHeaderSubviewProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenStackHeaderSubviewProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenStackHeaderSubviewState::getDynamic() const
+U facebook::react::RNSScreenStackProps::RNSScreenStackProps(facebook::react::PropsParserContext const&, facebook::react::RNSScreenStackProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSScreenState::getDynamic() const
+U facebook::react::RNSSearchBarComponentName
+U facebook::react::RNSSearchBarProps::RNSSearchBarProps(facebook::react::PropsParserContext const&, facebook::react::RNSSearchBarProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSStackHeaderConfigAndroidProps::RNSStackHeaderConfigAndroidProps(facebook::react::PropsParserContext const&, facebook::react::RNSStackHeaderConfigAndroidProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSStackHeaderConfigComponentName
+U facebook::react::RNSStackHeaderConfigState::getDynamic() const
+U facebook::react::RNSStackHeaderSubviewAndroidProps::RNSStackHeaderSubviewAndroidProps(facebook::react::PropsParserContext const&, facebook::react::RNSStackHeaderSubviewAndroidProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSStackHeaderSubviewComponentName
+U facebook::react::RNSStackHeaderSubviewState::getDynamic() const
+U facebook::react::RNSStackScreenComponentName
+U facebook::react::RNSStackScreenProps::RNSStackScreenProps(facebook::react::PropsParserContext const&, facebook::react::RNSStackScreenProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSStackScreenState::getDynamic() const
+U facebook::react::RNSTabsHostAndroidProps::RNSTabsHostAndroidProps(facebook::react::PropsParserContext const&, facebook::react::RNSTabsHostAndroidProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSTabsHostComponentName
+U facebook::react::RNSTabsHostState::getDynamic() const
+U facebook::react::RNSVGCircleComponentName
+U facebook::react::RNSVGCircleProps::RNSVGCircleProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGCircleProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGClipPathComponentName
+U facebook::react::RNSVGClipPathProps::RNSVGClipPathProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGClipPathProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGDefsComponentName
+U facebook::react::RNSVGDefsProps::RNSVGDefsProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGDefsProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGEllipseComponentName
+U facebook::react::RNSVGEllipseProps::RNSVGEllipseProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGEllipseProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeBlendComponentName
+U facebook::react::RNSVGFeBlendProps::RNSVGFeBlendProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeBlendProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeColorMatrixComponentName
+U facebook::react::RNSVGFeColorMatrixProps::RNSVGFeColorMatrixProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeColorMatrixProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeCompositeComponentName
+U facebook::react::RNSVGFeCompositeProps::RNSVGFeCompositeProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeCompositeProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeFloodComponentName
+U facebook::react::RNSVGFeFloodProps::RNSVGFeFloodProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeFloodProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeGaussianBlurComponentName
+U facebook::react::RNSVGFeGaussianBlurProps::RNSVGFeGaussianBlurProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeGaussianBlurProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeMergeComponentName
+U facebook::react::RNSVGFeMergeProps::RNSVGFeMergeProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeMergeProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFeOffsetComponentName
+U facebook::react::RNSVGFeOffsetProps::RNSVGFeOffsetProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFeOffsetProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGFilterComponentName
+U facebook::react::RNSVGFilterProps::RNSVGFilterProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGFilterProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGForeignObjectComponentName
+U facebook::react::RNSVGForeignObjectProps::RNSVGForeignObjectProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGForeignObjectProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGGroupComponentName
+U facebook::react::RNSVGGroupProps::RNSVGGroupProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGGroupProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGImageComponentName
+U facebook::react::RNSVGImageProps::RNSVGImageProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGImageProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGImageShadowNode::setImageManager(std::__ndk1::shared_ptr<facebook::react::ImageManager> const&)
+U facebook::react::RNSVGLayoutableShadowNode::RNSVGLayoutableShadowNode(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&)
+U facebook::react::RNSVGLayoutableShadowNode::RNSVGLayoutableShadowNode(facebook::react::ShadowNodeFragment const&, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily> const&, facebook::react::ShadowNodeTraits)
+U facebook::react::RNSVGLayoutableShadowNode::layout(facebook::react::LayoutContext)
+U facebook::react::RNSVGLineComponentName
+U facebook::react::RNSVGLineProps::RNSVGLineProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGLineProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGLinearGradientComponentName
+U facebook::react::RNSVGLinearGradientProps::RNSVGLinearGradientProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGLinearGradientProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGMarkerComponentName
+U facebook::react::RNSVGMarkerProps::RNSVGMarkerProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGMarkerProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGMaskComponentName
+U facebook::react::RNSVGMaskProps::RNSVGMaskProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGMaskProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGPathComponentName
+U facebook::react::RNSVGPathProps::RNSVGPathProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGPathProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGPatternComponentName
+U facebook::react::RNSVGPatternProps::RNSVGPatternProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGPatternProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGRadialGradientComponentName
+U facebook::react::RNSVGRadialGradientProps::RNSVGRadialGradientProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGRadialGradientProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGRectComponentName
+U facebook::react::RNSVGRectProps::RNSVGRectProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGRectProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGSvgViewAndroidComponentName
+U facebook::react::RNSVGSvgViewAndroidProps::RNSVGSvgViewAndroidProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGSvgViewAndroidProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGSymbolComponentName
+U facebook::react::RNSVGSymbolProps::RNSVGSymbolProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGSymbolProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGTSpanComponentName
+U facebook::react::RNSVGTSpanProps::RNSVGTSpanProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGTSpanProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGTextComponentName
+U facebook::react::RNSVGTextPathComponentName
+U facebook::react::RNSVGTextPathProps::RNSVGTextPathProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGTextPathProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGTextProps::RNSVGTextProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGTextProps const&, facebook::react::RawProps const&)
+U facebook::react::RNSVGUseComponentName
+U facebook::react::RNSVGUseProps::RNSVGUseProps(facebook::react::PropsParserContext const&, facebook::react::RNSVGUseProps const&, facebook::react::RawProps const&)
+U facebook::react::RawProps::at(char const*) const
+U facebook::react::RawProps::isEmpty() const
+U facebook::react::RawProps::parse(facebook::react::RawPropsParser const&)
+U facebook::react::RawPropsParser::postPrepare()
+U facebook::react::ReactNativeFeatureFlags::enableAccumulatedUpdatesInRawPropsAndroid()
+U facebook::react::ReactNativeFeatureFlags::enableExclusivePropsUpdateAndroid()
+U facebook::react::ReactNativeFeatureFlags::enablePropsUpdateReconciliationAndroid()
+U facebook::react::ShadowNode::getProps() const
+U facebook::react::ShadowNode::getState() const
+U facebook::react::ShadowNode::transferRuntimeShadowNodeReference(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, facebook::react::ShadowNodeFragment const&) const
+U facebook::react::ShadowNodeFamily::ShadowNodeFamily(facebook::react::ShadowNodeFamilyFragment const&, std::__ndk1::shared_ptr<facebook::react::EventEmitter>, std::__ndk1::weak_ptr<facebook::react::EventDispatcher const>, facebook::react::ComponentDescriptor const&)
+U facebook::react::ShadowNodeFamily::dispatchRawState(facebook::react::StateUpdate&&, facebook::react::EventQueue::UpdateMode)
+U facebook::react::ShadowNodeFamily::getMostRecentState() const
+U facebook::react::ShadowNodeFamily::~ShadowNodeFamily()
+U facebook::react::State::State(std::__ndk1::shared_ptr<void const>, facebook::react::State const&)
+U facebook::react::State::State(std::__ndk1::shared_ptr<void const>, std::__ndk1::weak_ptr<facebook::react::ShadowNodeFamily>)
+U facebook::react::YogaLayoutableShadowNode::YogaLayoutableShadowNode(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&)
+U facebook::react::YogaLayoutableShadowNode::YogaLayoutableShadowNode(facebook::react::ShadowNodeFragment const&, std::__ndk1::shared_ptr<facebook::react::ShadowNodeFamily> const&, facebook::react::ShadowNodeTraits)
+U facebook::react::YogaLayoutableShadowNode::appendChild(std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&)
+U facebook::react::YogaLayoutableShadowNode::completeClone(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&)
+U facebook::react::YogaLayoutableShadowNode::dirtyLayout()
+U facebook::react::YogaLayoutableShadowNode::getContentBounds() const
+U facebook::react::YogaLayoutableShadowNode::getIsLayoutClean() const
+U facebook::react::YogaLayoutableShadowNode::layout(facebook::react::LayoutContext)
+U facebook::react::YogaLayoutableShadowNode::layoutTree(facebook::react::LayoutContext, facebook::react::LayoutConstraints)
+U facebook::react::YogaLayoutableShadowNode::replaceChild(facebook::react::ShadowNode const&, std::__ndk1::shared_ptr<facebook::react::ShadowNode const> const&, unsigned long)
+U facebook::react::YogaLayoutableShadowNode::setPadding(facebook::react::RectangleEdges<float>) const
+U facebook::react::YogaLayoutableShadowNode::setPositionType(YGPositionType) const
+U facebook::react::YogaLayoutableShadowNode::setSize(facebook::react::Size) const
+U facebook::react::YogaLayoutableShadowNode::shouldNewRevisionDirtyMeasurement(facebook::react::ShadowNode const&, facebook::react::ShadowNodeFragment const&) const
+U facebook::react::rngesturehandler_codegen_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::rnscreens_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::rnsvg_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U facebook::react::safeareacontext_ModuleProvider(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, facebook::react::JavaTurboModule::InitParams const&)
+U fflush@LIBC
+U folly::Expected<double, folly::ConversionCode> folly::detail::str_to_floating<double>(folly::Range<char const*>*)
+U folly::Expected<long, folly::ConversionCode> folly::detail::str_to_integral<long>(folly::Range<char const*>*)
+U folly::TypeError::TypeError(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, folly::dynamic::Type)
+U folly::detail::to_ascii_powers<10ul, unsigned long>::data
+U folly::detail::to_ascii_table<10ul, folly::to_ascii_alphabet<false> >::data
+U folly::dynamic::TypeInfo<bool>::name
+U folly::dynamic::TypeInfo<double>::name
+U folly::dynamic::TypeInfo<folly::dynamic::ObjectImpl>::name
+U folly::dynamic::TypeInfo<std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > >::name
+U folly::dynamic::TypeInfo<std::__ndk1::vector<folly::dynamic, std::__ndk1::allocator<folly::dynamic> > >::name
+U folly::dynamic::at(folly::Range<char const*>) const &
+U folly::dynamic::destroy()
+U folly::dynamic::dynamic(folly::dynamic const&)
+U folly::dynamic::dynamic(folly::dynamic&&)
+U folly::dynamic::operator=(folly::dynamic&&)
+U folly::dynamic::operator[](folly::Range<char const*>) &
+U folly::dynamic::size() const
+U folly::makeConversionError(folly::ConversionCode, folly::Range<char const*>)
+U fprintf@LIBC
+U free@LIBC
+U fwrite@LIBC
+U getauxval@LIBC
+U getpid@LIBC
+U google::LogMessage::LogMessage(char const*, int, int)
+U google::LogMessage::stream()
+U google::LogMessage::~LogMessage()
+U malloc@LIBC
+U memcmp@LIBC
+U memcpy@LIBC
+U memmove@LIBC
+U memset@LIBC
+U nextafter@LIBC
+U operator delete(void*)
+U operator new(unsigned long)
+U pthread_rwlock_rdlock@LIBC
+U pthread_rwlock_unlock@LIBC
+U pthread_rwlock_wrlock@LIBC
+U std::__ndk1::__next_prime(unsigned long)
+U std::__ndk1::__shared_mutex_base::__shared_mutex_base()
+U std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+U std::__ndk1::__shared_weak_count::__release_weak()
+U std::__ndk1::__shared_weak_count::lock()
+U std::__ndk1::__shared_weak_count::~__shared_weak_count()
+U std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&)
+U std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::~sentry()
+U std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::append(char const*, unsigned long)
+U std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::push_back(char)
+U std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::reserve(unsigned long)
+U std::__ndk1::condition_variable::~condition_variable()
+U std::__ndk1::ctype<char>::id
+U std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+U std::__ndk1::ios_base::clear(unsigned int)
+U std::__ndk1::ios_base::getloc() const
+U std::__ndk1::locale::use_facet(std::__ndk1::locale::id&) const
+U std::__ndk1::locale::~locale()
+U std::__ndk1::mutex::~mutex()
+U std::bad_array_new_length::bad_array_new_length()
+U std::bad_array_new_length::~bad_array_new_length()
+U std::exception::what() const
+U std::exception::~exception()
+U std::length_error::~length_error()
+U std::logic_error::logic_error(char const*)
+U std::range_error::~range_error()
+U std::runtime_error::runtime_error(std::runtime_error const&)
+U std::runtime_error::what() const
+U std::runtime_error::~runtime_error()
+U std::terminate()
+U strcmp@LIBC
+U strlen@LIBC
+U strncmp@LIBC
+U syscall@LIBC
+U typeinfo for facebook::react::HostPlatformViewProps
+U typeinfo for facebook::react::JavaTurboModule
+U typeinfo for facebook::react::Props
+U typeinfo for facebook::react::RNSVGLayoutableShadowNode
+U typeinfo for facebook::react::YogaLayoutableShadowNode
+U typeinfo for std::__ndk1::__shared_weak_count
+U typeinfo for std::bad_array_new_length
+U typeinfo for std::bad_variant_access
+U typeinfo for std::exception
+U typeinfo for std::length_error
+U typeinfo for std::range_error
+U typeinfo for std::runtime_error
+U vtable for __cxxabiv1::__class_type_info
+U vtable for __cxxabiv1::__function_type_info
+U vtable for __cxxabiv1::__pointer_type_info
+U vtable for __cxxabiv1::__si_class_type_info
+U vtable for __cxxabiv1::__vmi_class_type_info
+U vtable for facebook::react::ClippingScrollViewDecoratorViewProps
+U vtable for facebook::react::HostPlatformViewProps
+U vtable for facebook::react::KeyboardBackgroundViewProps
+U vtable for facebook::react::KeyboardControllerViewProps
+U vtable for facebook::react::KeyboardGestureAreaProps
+U vtable for facebook::react::KeyboardToolbarGroupViewProps
+U vtable for facebook::react::OverKeyboardViewProps
+U vtable for facebook::react::Props
+U vtable for facebook::react::RNCSafeAreaProviderProps
+U vtable for facebook::react::RNCSafeAreaViewProps
+U vtable for facebook::react::RNGestureHandlerDetectorProps
+U vtable for facebook::react::RNGestureHandlerDetectorShadowNode
+U vtable for facebook::react::RNSFormSheetHostProps
+U vtable for facebook::react::RNSFullWindowOverlayProps
+U vtable for facebook::react::RNSModalScreenShadowNode
+U vtable for facebook::react::RNSSafeAreaViewProps
+U vtable for facebook::react::RNSScreenContainerProps
+U vtable for facebook::react::RNSScreenContentWrapperProps
+U vtable for facebook::react::RNSScreenFooterProps
+U vtable for facebook::react::RNSScreenNavigationContainerProps
+U vtable for facebook::react::RNSScreenProps
+U vtable for facebook::react::RNSScreenShadowNode
+U vtable for facebook::react::RNSScreenStackHeaderConfigProps
+U vtable for facebook::react::RNSScreenStackHeaderConfigShadowNode
+U vtable for facebook::react::RNSScreenStackHeaderSubviewProps
+U vtable for facebook::react::RNSScreenStackHeaderSubviewShadowNode
+U vtable for facebook::react::RNSScreenStackProps
+U vtable for facebook::react::RNSSearchBarProps
+U vtable for facebook::react::RNSStackHeaderConfigAndroidProps
+U vtable for facebook::react::RNSStackHeaderConfigShadowNode
+U vtable for facebook::react::RNSStackHeaderSubviewAndroidProps
+U vtable for facebook::react::RNSStackHeaderSubviewShadowNode
+U vtable for facebook::react::RNSStackScreenProps
+U vtable for facebook::react::RNSStackScreenShadowNode
+U vtable for facebook::react::RNSTabsHostAndroidProps
+U vtable for facebook::react::RNSVGCircleProps
+U vtable for facebook::react::RNSVGClipPathProps
+U vtable for facebook::react::RNSVGDefsProps
+U vtable for facebook::react::RNSVGEllipseProps
+U vtable for facebook::react::RNSVGFeBlendProps
+U vtable for facebook::react::RNSVGFeColorMatrixProps
+U vtable for facebook::react::RNSVGFeCompositeProps
+U vtable for facebook::react::RNSVGFeFloodProps
+U vtable for facebook::react::RNSVGFeGaussianBlurProps
+U vtable for facebook::react::RNSVGFeMergeProps
+U vtable for facebook::react::RNSVGFeOffsetProps
+U vtable for facebook::react::RNSVGFilterProps
+U vtable for facebook::react::RNSVGForeignObjectProps
+U vtable for facebook::react::RNSVGGroupProps
+U vtable for facebook::react::RNSVGImageProps
+U vtable for facebook::react::RNSVGImageShadowNode
+U vtable for facebook::react::RNSVGLineProps
+U vtable for facebook::react::RNSVGLinearGradientProps
+U vtable for facebook::react::RNSVGMarkerProps
+U vtable for facebook::react::RNSVGMaskProps
+U vtable for facebook::react::RNSVGPathProps
+U vtable for facebook::react::RNSVGPatternProps
+U vtable for facebook::react::RNSVGRadialGradientProps
+U vtable for facebook::react::RNSVGRectProps
+U vtable for facebook::react::RNSVGSvgViewAndroidProps
+U vtable for facebook::react::RNSVGSymbolProps
+U vtable for facebook::react::RNSVGTSpanProps
+U vtable for facebook::react::RNSVGTextPathProps
+U vtable for facebook::react::RNSVGTextProps
+U vtable for facebook::react::RNSVGUseProps
+U vtable for facebook::react::ShadowNode
+U vtable for facebook::react::YogaLayoutableShadowNode
+U vtable for std::bad_variant_access
+U vtable for std::length_error

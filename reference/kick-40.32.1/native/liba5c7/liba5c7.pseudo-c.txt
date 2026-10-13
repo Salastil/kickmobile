@@ -1,0 +1,4649 @@
+///// FUNCTION 0x0002c000
+int entry0 (int esi, int edx) {
+    loc_0x2c000:
+        // DATA XREF from entry0 @ +0x20
+        // STRING XREF from fcn.00118f70 @ 0x118fd4
+        x0 = segment.GNU_RELRO // 0x11c000 // [13] -r-x section size 971196 named .text
+        x0 = x0 + 0   // 0x11c000
+        // segment.GNU_RELRO
+        jmp sym.imp.__cxa_finalize
+         // (break)
+}
+///// FUNCTION 0x000f49bc
+int sym.JNI_OnLoad (int esi, int edx) {
+    loc_0xf49bc:
+        [sp, -0x60]! = (x28,2)
+        [sp, 0x10] = (x26,2)
+        [sp, 0x20] = (x24,2)
+        [sp, 0x30] = (x22,2)
+        [sp, 0x40] = (x20,2)
+        [sp, 0x50] = (x29,2)
+        x29 = var_50h
+        sp = sp - 0x90
+        x24 = x0      // arg1
+        x8 = 0x129000
+        x8 = x8 + 0x148
+        mrs x9,tpidr_el0
+        x9 = [x9 + 0x28] // 0x12f540
+        // elf_shdr
+        [x29 = x9
+        x8 = [x8 + 0x80] // pstate
+        br x8
+         // (break)
+}
+///// FUNCTION 0x00119028
+int sym.__emutls_get_address (int esi, int edx) {
+    loc_0x119028:
+        x1 = segment.GNU_RELRO // 0x11c000
+        [sp, -0x40]! = (x29,2)
+        x29 = sp
+        x1 = entry0   // pstate // reloc.pthread_create
+        [sp, 0x20] = (x21,2)
+        [sp, 0x10] = (x19,2)
+        [sp, 0x30] = (x23,2)
+        x22 = x0      // arg1
+        if x1 jmp 0x119064 // unlikely
+            
+    loc_0x119064:
+        x0 = x0 + 0x10 // arg1
+        ldar x19,[x0]
+        x24 = 0x147000
+        if x19 jmp 0x1190b8 // likely
+            
+    loc_0x1190b8:
+        w0 = [x24 + 0x9d8] // pstate
+        sym.imp.pthread_getspecific ()
+        x20 = x0
+        if x0 jmp 0x1190fc // unlikely
+            
+    loc_0x1190fc:
+        x23 = [x0 + 8] // pstate
+        if (x19 == x23)
+        b.ls 0x119154 // likely
+            
+    loc_0x119154:
+        x19 = x20 + x19,lsl 3
+        x0 = [x19 + 8] // 0xda
+        if x0 jmp 0x11916c // unlikely
+            
+    loc_0x11916c:
+        // CODE XREF from sym.__emutls_get_address @ 0x119060
+        (x19, 2) = 3
+        (x21, 2) = 3
+        (x23, 2) = 3
+        (x29, 2) = 3
+        0x0011917c
+         // } else {
+    loc_0x119160:
+        x0 = x22      // size_t size
+        fcn.00118f70 () // fcn.00118f70(0x0)
+        [x19 + 8] = x0
+         // } else {
+         // } else {
+         // } else {
+         // } else {
+        }
+        return eax;
+        goto loc_0x11904c
+    loc_0x119054:
+        fcn.00118f70 () // fcn.00118f70(0x0)
+        [x22 + 0x10] = x0
+         // do {
+    loc_0x11905c:
+        x0 = [x22 + 0x10] // 0xdd
+        jmp 0x11916c
+         // } while (?);
+        }
+        return eax;
+    loc_0x00119098: // orphan
+             x19 = [x20 + 0x38]       // pstate
+             x0 = x22 + 0x10
+             x19 = x19 + 1
+             [x20 + 0x38] = x19       // u"\n@\x17\x16\x06"
+             stlr x19,[x0]
+
+    loc_0x001190ac: // orphan
+         x0 = x24 + 0x9d8
+         x0 = x0 + 0x10
+         sym.imp.pthread_mutex_unlock ()
+
+    loc_0x001190e0: // orphan
+         sym.imp.abort ()         // " "
+
+    loc_0x001190e4: // orphan
+         x0 = 0x1
+         [x20] = x0
+         x0 = 0x147000
+         [x20 + 8] = x21
+         w0 = [x0 + 0x9d8]        // pstate
+         jmp 0x11914c
+
+    loc_0x0011912c: // orphan
+         [x0 + 8] = x21
+         x0 = x23 + 2
+         x2 = x21 - x23
+         w1 = 0
+         x0 = x20 + x0,lsl 3      // void *s
+         x2 = x2 << 3             // size_t n
+         sym.imp.memset ()
+                                  // void *memset(0x0000000000000000, -1, ?)
+         w0 = [x24 + 0x9d8]       // pstate
+
+    loc_0x0011914c: // orphan
+         // CODE XREF from sym.__emutls_get_address @ 0x1190f8
+         x1 = x20
+         sym.imp.pthread_setspecific ()
+
+}
+///// FUNCTION 0x00119180
+int sym.__emutls_register_common (int esi, int edx) {
+    loc_0x119180:
+        x4 = [x0]     // 0xc7 // arg1
+        if (x4 == x1) // arg2
+        b.hs 0x119194 // likely
+            
+    loc_0x119194:
+        x4 = [x0 + 8] // pstate // arg1
+        if (x4 == x2) // arg3
+        b.hs 0x1191a4 // likely
+            
+    loc_0x1191a4:
+        // CODE XREF from sym.__emutls_register_common @ 0x11919c
+        if !x3 jmp 0x1191b8 // likely
+            
+    loc_0x1191b8:
+        // CODE XREFS from sym.__emutls_register_common @ 0x1191a4, 0x1191b0
+        0x001191b8
+         // } else {
+    loc_0x1191a8:
+        x2 = [x0]     // 0xc7 // arg1
+        if (x1 == x2) // arg2
+        b.ne 0x1191b8 // likely
+         // } else {
+         // } else {
+        }
+        return eax;
+    loc_0x001191b4: // orphan
+             [x0 + 0x18] = x3         // arg4
+
+}
+///// FUNCTION 0x001191e0
+int sym.imp.__cxa_finalize (int esi, int edx) {
+    loc_0x1191e0:
+        // CODE XREF from entry0 @ 0x2c008
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x238] // 0x1191c0
+        // fcn.001191c0 // reloc.__cxa_finalize
+        x16 = x16 + 0x238 // 0x11c238
+        // reloc.__cxa_finalize
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001191f0
+int sym.imp.__cxa_atexit (int esi, int edx) {
+    loc_0x1191f0:
+        // CODE XREF from entry0 @ +0x38
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x240] // 0x1191c0
+        // fcn.001191c0 // reloc.__cxa_atexit
+        x16 = x16 + 0x240 // 0x11c240
+        // reloc.__cxa_atexit
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119200
+int sym.imp.__stack_chk_fail (int esi, int edx) {
+    loc_0x119200:
+        // XREFS(123)
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x248] // 0x1191c0
+        // fcn.001191c0 // reloc.__stack_chk_fail
+        x16 = x16 + 0x248 // 0x11c248
+        // reloc.__stack_chk_fail
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119260
+int sym.imp.__system_property_get (int esi, int edx) {
+    loc_0x119260:
+        // CALL XREF from fcn.00069eec @ +0x564
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x278] // 0x1191c0
+        // fcn.001191c0 // reloc.__system_property_get
+        x16 = x16 + 0x278 // 0x11c278
+        // reloc.__system_property_get
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119330
+int sym.imp.calloc (int esi, int edx) {
+    loc_0x119330:
+        // CALL XREF from sym.__emutls_get_address @ 0x1190d4
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2e0] // 0x1191c0
+        // fcn.001191c0 // reloc.calloc
+        x16 = x16 + 0x2e0 // 0x11c2e0
+        // reloc.calloc
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119280
+int sym.imp.fopen (int esi, int edx) {
+    loc_0x119280:
+        // CALL XREF from fcn.0010bf5c @ +0x14c0
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x288] // 0x1191c0
+        // fcn.001191c0 // reloc.fopen
+        x16 = x16 + 0x288 // 0x11c288
+        // reloc.fopen
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192c0
+int sym.imp.free (int esi, int edx) {
+    loc_0x1192c0:
+        // CALL XREF from fcn.0010fc60 @ +0x92f0
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2a8] // 0x1191c0
+        // fcn.001191c0 // reloc.free
+        x16 = x16 + 0x2a8 // 0x11c2a8
+        // reloc.free
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119250
+int sym.imp.getpagesize (int esi, int edx) {
+    loc_0x119250:
+        // CALL XREF from fcn.00069eec @ +0x4a8
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x270] // 0x1191c0
+        // fcn.001191c0 // reloc.getpagesize
+        x16 = x16 + segment.NOTE // 0x11c270
+        // reloc.getpagesize
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192d0
+int sym.imp.malloc (int esi, int edx) {
+    loc_0x1192d0:
+        // CALL XREFS from fcn.00118f70 @ 0x118f98, 0x118fb8
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2b0] // 0x1191c0
+        // fcn.001191c0 // reloc.malloc
+        x16 = x16 + 0x2b0 // 0x11c2b0
+        // reloc.malloc
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119240
+int sym.imp.memcpy (int esi, int edx) {
+    loc_0x119240:
+        // XREFS: CALL 0x000460f4  CALL 0x00046138  CALL 0x000461a8
+        // XREFS: CALL 0x00056da4  CALL 0x0005cf14  CALL 0x0006a3ac
+        // XREFS: CALL 0x0007c710  CALL 0x0008117c  CALL 0x000912bc
+        // XREFS: CALL 0x0009b920  CALL 0x0009cfe4  CALL 0x000b54e8
+        // XREFS: CALL 0x000c42f0  CALL 0x000cd7e8  CALL 0x000d2748
+        // XREFS: CALL 0x000d8d04  CALL 0x000eb0c4  CALL 0x00118fe4
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x268] // 0x1191c0
+        // fcn.001191c0 // reloc.memcpy
+        x16 = x16 + 0x268 // 0x11c268
+        // reloc.memcpy
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119230
+int sym.imp.memmove (int esi, int edx) {
+    loc_0x119230:
+        // XREFS: CALL 0x00034924  CALL 0x0003d430  CALL 0x00042b8c
+        // XREFS: CALL 0x0004eb80  CALL 0x0005fcec  CALL 0x00078a30
+        // XREFS: CALL 0x00095568  CALL 0x000c77b4  CALL 0x000df004
+        // XREFS: CALL 0x00113b20  CALL 0x0011622c
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x260] // 0x1191c0
+        // fcn.001191c0 // reloc.memmove
+        x16 = x16 + 0x260 // 0x11c260
+        // reloc.memmove
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119220
+int sym.imp.memset (int esi, int edx) {
+    loc_0x119220:
+        // XREFS(178)
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x258] // 0x1191c0
+        // fcn.001191c0 // reloc.memset
+        x16 = x16 + 0x258 // 0x11c258
+        // reloc.memset
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119270
+int sym.imp.read (int esi, int edx) {
+    loc_0x119270:
+        // CALL XREF from sym.JNI_OnLoad @ +0x26c8
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x280] // 0x1191c0
+        // fcn.001191c0 // reloc.read
+        x16 = x16 + 0x280 // 0x11c280
+        // reloc.read
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119340
+int sym.imp.realloc (int esi, int edx) {
+    loc_0x119340:
+        // CALL XREF from sym.__emutls_get_address @ 0x119120
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2e8] // 0x1191c0
+        // fcn.001191c0 // reloc.realloc
+        x16 = x16 + 0x2e8 // 0x11c2e8
+        // reloc.realloc
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192a0
+int sym.imp.abort (int esi, int edx) {
+    loc_0x1192a0:
+        // CALL XREF from fcn.0010fc60 @ +0x9278
+        // CALL XREF from fcn.00118f70 @ 0x118fa0
+        // CALL XREF from sym.__emutls_get_address @ 0x1190e0
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x298] // 0x1191c0
+        // fcn.001191c0 // reloc.abort
+        x16 = x16 + 0x298 // 0x11c298
+        // reloc.abort
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192e0
+int sym.imp.pthread_key_delete (int esi, int edx) {
+    loc_0x1192e0:
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2b8] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_key_delete
+        x16 = x16 + 0x2b8 // 0x11c2b8
+        // reloc.pthread_key_delete
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119290
+int sym.imp.pthread_key_create (int esi, int edx) {
+    loc_0x119290:
+        // CALL XREF from fcn.0010fc60 @ +0x9270
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x290] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_key_create
+        x16 = x16 + 0x290 // 0x11c290
+        // reloc.pthread_key_create
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119310
+int sym.imp.pthread_mutex_unlock (int esi, int edx) {
+    loc_0x119310:
+        // CALL XREF from sym.__emutls_get_address @ 0x1190b4
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2d0] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_mutex_unlock
+        x16 = x16 + 0x2d0 // 0x11c2d0
+        // reloc.pthread_mutex_unlock
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119300
+int sym.imp.pthread_mutex_lock (int esi, int edx) {
+    loc_0x119300:
+        // CALL XREF from sym.__emutls_get_address @ 0x11908c
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2c8] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_mutex_lock
+        x16 = x16 + 0x2c8 // 0x11c2c8
+        // reloc.pthread_mutex_lock
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192b0
+int sym.imp.pthread_setspecific (int esi, int edx) {
+    loc_0x1192b0:
+        // CALL XREF from sym.__emutls_get_address @ 0x119150
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2a0] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_setspecific
+        x16 = x16 + 0x2a0 // 0x11c2a0
+        // reloc.pthread_setspecific
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00119320
+int sym.imp.pthread_getspecific (int esi, int edx) {
+    loc_0x119320:
+        // CALL XREF from sym.__emutls_get_address @ 0x1190bc
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2d8] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_getspecific
+        x16 = x16 + 0x2d8 // 0x11c2d8
+        // reloc.pthread_getspecific
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x001192f0
+int sym.imp.pthread_once (int esi, int edx) {
+    loc_0x1192f0:
+        // CALL XREF from sym.__emutls_get_address @ 0x119084
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x2c0] // 0x1191c0
+        // fcn.001191c0 // reloc.pthread_once
+        x16 = x16 + 0x2c0 // 0x11c2c0
+        // reloc.pthread_once
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x00108c24
+int fcn.00108c24 (int esi, int edx) {
+    loc_0x108c24:
+        // CALL XREF from fcn.0002c2d4 @ +0x47c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x00108c30
+        x8 = [x8 + 0xd80] // 0xcf
+        x9 = 0xb830
+        x9 = 0x6f6
+        x9 = 0xcaf6
+        x9 = 0x68b5
+        x8 = !x8
+        x11 = x8 ^ x9
+        x8 = x8 & x9
+        w10 = 0x24    // '$'
+        x8 = x11 + x8,lsl 1
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x00108c64
+         // (break)
+}
+///// FUNCTION 0x00119210
+int fcn.00119210 (int esi, int edx) {
+    loc_0x119210:
+        // XREFS(115)
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x250] // 0x1191c0
+        // fcn.001191c0 // reloc.__emutls_get_address
+        x16 = x16 + 0x250 // 0x11c250
+        // reloc.__emutls_get_address
+        br x17        // fcn.001191c0
+         // (break)
+}
+///// FUNCTION 0x000ff540
+int fcn.000ff540 (int esi, int edx) {
+    loc_0xff540:
+        // CALL XREF from fcn.0002c798 @ +0x18e4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = segment.LOAD3 // 0x120000
+        0x000ff54c
+        x9 = [x9 + 0x758] // 0xd0
+        x11 = 0xe4a7
+        x11 = 0x47f1
+        x11 = 0x84ab
+        x11 = 0xbd4d
+        x9 = !x9
+        x13 = x9 | x11
+        x9 = x9 & x11
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x18
+        x9 = x13 + x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000ff58c
+         // (break)
+}
+///// FUNCTION 0x0004bae8
+int fcn.0004bae8 (int esi, int edx) {
+    loc_0x4bae8:
+        // CALL XREF from fcn.0002c798 @ +0x2704
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12b000
+        0x0004baf4
+        x8 = [x8 + 0x6e8] // 0xcf
+        x9 = 0xb2dc
+        x9 = 0xf5ca
+        x9 = 0xc93e
+        x9 = 0x60a2
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0x8
+        w11 = 0x10
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0004bb38
+         // (break)
+}
+///// FUNCTION 0x000c49a8
+int fcn.000c49a8 (int esi, int edx) {
+    loc_0xc49a8:
+        // CALL XREF from fcn.0002c798 @ +0x3374
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x000c49b4
+        x8 = [x8 + 0x7d0] // 0xcf
+        x9 = 0x3808
+        x9 = 0xc06f
+        x9 = 0x37a4
+        x9 = 0x3230   // '02'
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x18
+        x8 = x11 + x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x000c49e8
+         // (break)
+}
+///// FUNCTION 0x00100d00
+int fcn.00100d00 (int esi, int edx) {
+    loc_0x100d00:
+        // CALL XREF from fcn.0002c798 @ +0x4028
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00100d08
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x18
+        x8 = x8 - x9
+        x9 = 0x123000
+        [x8] = x10
+        x8 = [x9 + 0xf98] // 0xd0
+        x9 = 0x4ba6
+        x9 = 0x3a3c   // '<:'
+        x9 = 0x51f3
+        x9 = 0x9bae
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00100d54
+         // (break)
+}
+///// FUNCTION 0x0002c2d4
+int fcn.0002c2d4 (int esi, int edx) {
+    loc_0x2c2d4:
+        // CALL XREF from fcn.00031484 @ +0xd1c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0002c2dc
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x8
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x12e000
+        x8 = [x8 + 0xf50] // 0xcf
+        x9 = 0xe0a2
+        x9 = 0x801b
+        x9 = 0x3eb1
+        x9 = 0x224d   // 'M\"'
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0002c318
+         // (break)
+}
+///// FUNCTION 0x0004f28c
+int fcn.0004f28c (int esi, int edx) {
+    loc_0x4f28c:
+        // CALL XREF from fcn.00033554 @ +0x2814
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12b000
+        0x0004f298
+        x8 = [x8 + 0x2c0] // 0xcf
+        x9 = 0x2b00
+        x9 = 0xb7c3
+        x9 = 0x2f41   // 'A/'
+        x9 = 0x51d
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x10
+        x8 = x10 - x8
+        w10 = 0x4
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x0004f2e4
+         // (break)
+}
+///// FUNCTION 0x00098f30
+int fcn.00098f30 (int esi, int edx) {
+    loc_0x98f30:
+        // CALL XREF from fcn.00033554 @ +0x51cc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x00098f3c
+        x8 = [x8 + 0x18] // 0xcf
+        x9 = 0xa1e7
+        x9 = 0x9a1a
+        x9 = 0xaf5f
+        x9 = 0x654d   // 'Me'
+        x8 = x9 - x8
+        w10 = 0x14
+        w11 = 0x18
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00098f74
+         // (break)
+}
+///// FUNCTION 0x0010bf5c
+int fcn.0010bf5c (int esi, int edx) {
+    loc_0x10bf5c:
+        // CALL XREF from fcn.00033554 @ +0x6c7c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x124000
+        0x0010bf68
+        x10 = [x10 + 0xf98] // 0xd1
+        x11 = 0x7747  // 'Gw'
+        x8 = x29 << 1
+        x11 = 0xabea
+        x9 = x29 ^ 8
+        x11 = 0xfbcb
+        x8 = x8 | 0x10
+        x11 = 0x656c  // 'le'
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 ^ x11
+        x9 = x9 & x11
+        w11 = 0x18
+        x9 = x10 + x9,lsl 1
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0010bfb0
+         // (break)
+}
+///// FUNCTION 0x00088020
+int fcn.00088020 (int esi, int edx) {
+    loc_0x88020:
+        // CALL XREF from fcn.00033554 @ +0x72cc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12e000
+        0x0008802c
+        x10 = [x10 + 0xf20] // 0xd1
+        x11 = 0x36d
+        x11 = 0xb747
+        x11 = 0x93e6
+        x11 = 0xd062
+        x10 = !x10
+        x8 = x29 & 8
+        x13 = x10 | x11
+        x10 = x10 & x11
+        x9 = x29 ^ 8
+        w12 = 0x24    // '$'
+        x8 = x8 << 1
+        x10 = x13 + x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00088070
+         // (break)
+}
+///// FUNCTION 0x000c92a0
+int fcn.000c92a0 (int esi, int edx) {
+    loc_0xc92a0:
+        // CALL XREF from fcn.00033554 @ +0x7d78
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x124000
+        0x000c92ac
+        x8 = [x8 + 0xfb0] // 0xcf
+        x9 = 0x63a1
+        x9 = 0x981
+        x9 = 0xa68c
+        x9 = 0xf460
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 & x9
+        x8 = x11 + x8
+        x9 = x29 & x8
+        w10 = 0x20
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000c92f0
+         // (break)
+}
+///// FUNCTION 0x000b119c
+int fcn.000b119c (int esi, int edx) {
+    loc_0xb119c:
+        // CALL XREF from fcn.00033554 @ +0x7d84
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x122000
+        0x000b11a8
+        x8 = [x8 + 0x250] // 0xcf
+        x9 = 0x8d51
+        x9 = 0xb65f
+        x9 = 0xff83
+        x9 = 0x551c   // '\x1cU'
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0x24    // '$'
+        w11 = 0x1c
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000b11ec
+         // (break)
+}
+///// FUNCTION 0x000c0dd8
+int fcn.000c0dd8 (int esi, int edx) {
+    loc_0xc0dd8:
+        // CALL XREF from fcn.00033554 @ +0x838c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000c0de0
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x8
+        x8 = x8 - x9
+        x9 = 0x129000
+        [x8] = x10
+        x8 = [x9 + 0xd78] // 0xd0
+        x9 = 0x6ecb
+        x9 = 0x4033   // '3@'
+        x9 = 0x4cc7
+        x9 = 0x95a1
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000c0e2c
+         // (break)
+}
+///// FUNCTION 0x0006a7a0
+int fcn.0006a7a0 (int esi, int edx) {
+    loc_0x6a7a0:
+        // CALL XREF from fcn.0003d9ec @ +0xb8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x0006a7ac
+        x8 = [x8 + 0x858] // 0xcf
+        x9 = 0x2655   // 'U&'
+        x10 = 0x2655  // 'U&'
+        x9 = 0xebcc
+        x10 = 0xebcc
+        x9 = 0xd1ee
+        x10 = 0xd1ee
+        x9 = 0xd59a
+        x10 = 0x559a
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        w11 = 0x1c
+        w12 = 0xc
+        x8 = x9 + x8,lsl 1
+        [x8 + x29] = x11
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x0006a7f8
+         // (break)
+}
+///// FUNCTION 0x000ff904
+int fcn.000ff904 (int esi, int edx) {
+    loc_0xff904:
+        // CALL XREF from fcn.0003dd34 @ +0xbc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ff90c
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x24    // '$'
+        x11 = 0x125000
+        [x8 + x9] = x10
+        x8 = [x11 + 0xbd0] // 0xd2
+        x9 = 0xa444
+        x10 = 0xa444
+        x9 = 0xec6
+        x10 = 0xec6
+        x9 = 0x40c5
+        x10 = 0x40c5
+        x9 = 0xf90c
+        x10 = 0x790c  // '\fy'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10 // elf_phdr
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000ff960
+         // (break)
+}
+///// FUNCTION 0x0003fd84
+int fcn.0003fd84 (int esi, int edx) {
+    loc_0x3fd84:
+        // CALL XREF from fcn.0003dd34 @ +0x8ac
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x12d000
+        0x0003fd90
+        x9 = [x9 + 0xa60] // 0xd0
+        x11 = 0x5b27  // ''['
+        x11 = 0x86d6
+        x11 = 0x28c6
+        x11 = 0x56f1
+        x9 = !x9
+        x13 = x9 ^ x11
+        x9 = x9 & x11
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x1c
+        x9 = x13 + x9,lsl 1
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x0003fdd0
+         // (break)
+}
+///// FUNCTION 0x0010be78
+int fcn.0010be78 (int esi, int edx) {
+    loc_0x10be78:
+        // CALL XREF from fcn.0003fb4c @ +0x198
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0010be80
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x28    // '('
+        x8 = x8 - x9
+        x9 = 0x129000
+        [x8] = x10
+        x8 = [x9 + 0xd58] // 0xd0
+        x9 = 0x9db7
+        x9 = 0xba6a
+        x9 = 0x1666   // 'f\x16'
+        x9 = 0xdbd
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0010becc
+         // (break)
+}
+///// FUNCTION 0x00069eec
+int fcn.00069eec (int esi, int edx) {
+    loc_0x69eec:
+        // CALL XREF from fcn.00040278 @ +0x9e8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12a000
+        0x00069ef8
+        x8 = [x8 + 0x120] // 0xcf
+        x9 = 0x3a2d   // '-:'
+        x9 = 0x9066
+        x9 = 0xe518
+        x9 = 0x17db
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0x4
+        w11 = 0xc
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00069f3c
+         // (break)
+}
+///// FUNCTION 0x0003142c
+int fcn.0003142c (int esi, int edx) {
+    loc_0x3142c:
+        // CALL XREF from fcn.00040278 @ +0x9fc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00031434
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x28    // '('
+        x8 = x8 - x9
+        x9 = 0x129000
+        [x8] = x10
+        x8 = [x9 + 0x9b8] // 0xd0
+        x9 = 0x7a42   // 'Bz'
+        x9 = 0x40f5
+        x9 = 0xed4c
+        x9 = 0xd254
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00031480
+         // (break)
+}
+///// FUNCTION 0x000898d8
+int fcn.000898d8 (int esi, int edx) {
+    loc_0x898d8:
+        // CALL XREF from fcn.00040278 @ +0xf2c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x28     // '('
+        0x000898e4
+        x9 = 0x129000
+        [var_10h_2] = x8
+        x8 = [x9 + 0x140] // 0xd0
+        x9 = 0xefd1
+        x9 = 0x4d89
+        x9 = 0xcb7d
+        x9 = 0x69f3
+        x8 = !x8
+        x10 = x8 | x9
+        x10 = x10 << 1
+        x8 = x8 ^ x9
+        x8 = x10 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00089920
+         // (break)
+}
+///// FUNCTION 0x000c9660
+int fcn.000c9660 (int esi, int edx) {
+    loc_0xc9660:
+        // CALL XREF from fcn.00040278 @ +0x46c4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000c9668
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x20
+        x8 = x8 - x9
+        x9 = 0x12b000
+        [x8] = x10
+        x8 = [x9 + 0x350] // 0xd0
+        x9 = 0xc61c
+        x10 = 0x630e  // '\x0ec'
+        x9 = 0xca46
+        x10 = 0xe523
+        x9 = 0x913
+        x10 = 0x8489
+        x9 = 0x7f     // '\x7f'
+        x10 = 0x803f
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000c96c4
+         // (break)
+}
+///// FUNCTION 0x000d9578
+int fcn.000d9578 (int esi, int edx) {
+    loc_0xd9578:
+        // CALL XREF from fcn.00048a04 @ +0x11c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x000d9584
+        x8 = [x8 + 0x908] // 0xcf
+        x9 = 0x871
+        x10 = 0x871
+        x9 = 0x504
+        x10 = 0x504
+        x9 = 0xb2c4
+        x10 = 0xb2c4
+        x9 = 0xd8c0
+        x10 = 0x58c0
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        w11 = 0x18
+        w12 = 0x20
+        x8 = x9 + x8,lsl 1
+        [x8 + x29] = x11
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000d95d0
+         // (break)
+}
+///// FUNCTION 0x000991b8
+int fcn.000991b8 (int esi, int edx) {
+    loc_0x991b8:
+        // CALL XREF from fcn.00048a04 @ +0x1940
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x10 = 0x12a000
+        0x000991c4
+        x10 = [x10 + 0xf70] // 0xd1
+        x11 = 0x123f  // '?\x12'
+        x11 = 0x2699
+        x11 = 0x5487
+        x11 = 0xf599
+        x10 = !x10
+        x8 = x29 & 8
+        x13 = x10 | x11
+        x10 = x10 & x11
+        x9 = x29 ^ 8
+        w12 = 0x8
+        x8 = x8 << 1
+        x10 = x13 + x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00099208
+         // (break)
+}
+///// FUNCTION 0x000cf944
+int fcn.000cf944 (int esi, int edx) {
+    loc_0xcf944:
+        // CALL XREF from fcn.00048a04 @ +0x1aa0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x18
+        0x000cf950
+        x9 = 0x121000
+        [var_10h_2] = x8
+        x8 = [x9 + 0xf28] // 0xd0
+        x9 = 0x8de9
+        x9 = 0x8cca
+        x9 = 0xf71e
+        x9 = 0x217f   // '\x7f!'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cf988
+         // (break)
+}
+///// FUNCTION 0x0003fcf0
+int fcn.0003fcf0 (int esi, int edx) {
+    loc_0x3fcf0:
+        // CALL XREF from fcn.00048a04 @ +0x1b24
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x128000
+        0x0003fcfc
+        x8 = [x8 + 0xda0] // 0xcf
+        x9 = 0xf819
+        x9 = 0x4099
+        x9 = 0x6f4d   // 'Mo'
+        x9 = 0x8910
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x8
+        x8 = x11 + x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x0003fd30
+         // (break)
+}
+///// FUNCTION 0x000d376c
+int fcn.000d376c (int esi, int edx) {
+    loc_0xd376c:
+        // CALL XREF from fcn.0004bb94 @ +0xa8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000d3774
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x4
+        x8 = x8 << 1
+        x11 = 0x121000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xee8] // 0xd2
+        x9 = 0x2815   // '\x15('
+        x9 = 0x1802
+        x9 = 0xe7a9
+        x9 = 0x62f4
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000d37bc
+         // (break)
+}
+///// FUNCTION 0x00103568
+int fcn.00103568 (int esi, int edx) {
+    loc_0x103568:
+        // CALL XREF from fcn.0004bb94 @ +0x7d0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x00103574
+        x8 = [x8 + 0x3d8] // 0xcf
+        x9 = 0x8eed
+        x9 = 0xd54b
+        x9 = 0x415a   // 'ZA'
+        x9 = 0x9606
+        x8 = x9 - x8
+        w10 = 0xc
+        w11 = 0x24    // '$'
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x001035ac
+         // (break)
+}
+///// FUNCTION 0x00101aac
+int fcn.00101aac (int esi, int edx) {
+    loc_0x101aac:
+        // CALL XREF from fcn.0004f28c @ +0xcc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12b000
+        0x00101ab8
+        x8 = [x8 + 0x368] // 0xcf
+        x9 = 0x5818   // '\x18X'
+        x10 = 0xac0c
+        x9 = 0xb671
+        x10 = 0x5b38  // '8['
+        x9 = 0x720e   // '\x0er'
+        x10 = 0xb907
+        x9 = 0x10d1
+        x10 = 0x8868
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        w10 = 0x28    // '('
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        w8 = 0x24     // '$'
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00101b0c
+         // (break)
+}
+///// FUNCTION 0x000ef858
+int fcn.000ef858 (int esi, int edx) {
+    loc_0xef858:
+        // CALL XREF from fcn.0004f28c @ +0x3618
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ef860
+        x8 = x29 << 1
+        x10 = 0x12d000
+        x9 = x29 ^ 8
+        x10 = [x10 + 0x1f8] // 0xd1
+        x8 = x8 | 0x10
+        x11 = 0xcf14
+        x8 = x8 - x9
+        x9 = 0xe78a
+        x11 = 0x3231  // '12'
+        x9 = 0x1918   // '\x18\x19'
+        x11 = 0x3d08
+        x9 = 0x1e84
+        x11 = 0x9f58
+        x9 = 0xcfac
+        x10 = !x10
+        x11 = x11 | x10,lsl 1
+        x9 = x10 ^ x9
+        w10 = 0x28    // '('
+        x9 = x11 - x9
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000ef8bc
+         // (break)
+}
+///// FUNCTION 0x00101d98
+int fcn.00101d98 (int esi, int edx) {
+    loc_0x101d98:
+        // CALL XREF from fcn.0004f28c @ +0x3e98
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x124000
+        0x00101da4
+        x8 = [x8 + 0x2f0] // 0xcf
+        x9 = 0xbc3e
+        x10 = 0xbc3e
+        x9 = 0xddaf
+        x10 = 0xddaf
+        x9 = 0xa9c6
+        x10 = 0xa9c6
+        x9 = 0x94cf
+        x10 = 0x14cf
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 | x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        w10 = 0x4
+        x8 = x9 - x8
+        w9 = 0x8
+        [x8] = x10
+        [x29] = x9
+        (x29, 2) = 3  // sp
+        0x00101e00
+         // (break)
+}
+///// FUNCTION 0x000aa13c
+int fcn.000aa13c (int esi, int edx) {
+    loc_0xaa13c:
+        // CALL XREF from fcn.0004f28c @ +0x7d8c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000aa144
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x14
+        x8 = x8 - x9
+        [x8] = x10
+        x8 = 0x126000
+        x8 = [x8 + 0x30] // 0xcf
+        x9 = 0x1e74   // 't\x1e'
+        x9 = 0x1f24   // '$\x1f'
+        x9 = 0x2e     // '.'
+        x9 = 0x1aba
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000aa184
+         // (break)
+}
+///// FUNCTION 0x0008270c
+int fcn.0008270c (int esi, int edx) {
+    loc_0x8270c:
+        // CALL XREF from fcn.0004f28c @ +0xd544
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x127000
+        0x00082718
+        x10 = [x10 + 0xbb0] // 0xd1
+        x11 = 0x681a  // '\x1ah'
+        x11 = 0x598d
+        x11 = 0xcf3
+        x8 = x29 & 8
+        x11 = 0x8470
+        x9 = x29 ^ 8
+        w12 = 0x20
+        x8 = x8 << 1
+        x10 = x11 - x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00082750
+         // (break)
+}
+///// FUNCTION 0x0010fa4c
+int fcn.0010fa4c (int esi, int edx) {
+    loc_0x10fa4c:
+        // CALL XREF from fcn.0004f28c @ +0xe010
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x12e000
+        0x0010fa58
+        x8 = [x8 + 0x3e0] // 0xcf
+        x9 = 0x5d2c   // ',]'
+        x9 = 0xc184
+        x9 = 0x4345   // 'EC'
+        x9 = 0x2d13   // '\x13-'
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0x4
+        w11 = 0x8
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0010fa9c
+         // (break)
+}
+///// FUNCTION 0x000be224
+int fcn.000be224 (int esi, int edx) {
+    loc_0xbe224:
+        // CALL XREF from fcn.0004f28c @ +0xead8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x123000
+        0x000be230
+        x8 = [x8 + 0x970] // 0xcf
+        x9 = 0xc1b    // ''
+        x9 = 0x27ef
+        x9 = 0x85f4
+        x9 = 0xb2f4
+        x8 = x9 - x8
+        w10 = 0x10
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000be264
+         // (break)
+}
+///// FUNCTION 0x000ff964
+int fcn.000ff964 (int esi, int edx) {
+    loc_0xff964:
+        // CALL XREF from fcn.0004f28c @ +0x11068
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ff96c
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x14
+        x11 = 0x126000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x368] // 0xd2
+        x9 = 0x2d3b   // '//-'
+        x9 = 0x6202
+        x9 = 0xb6c8
+        x9 = 0xf66e
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000ff9b0
+         // (break)
+}
+///// FUNCTION 0x0010bddc
+int fcn.0010bddc (int esi, int edx) {
+    loc_0x10bddc:
+        // CALL XREF from fcn.0004f28c @ +0x14790
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12e000
+        0x0010bde8
+        x8 = [x8 + 0x360] // 0xcf
+        x9 = 0x42d6
+        x9 = 0x1bfc
+        x9 = 0x8076
+        x9 = 0x2386
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0xc
+        w11 = 0x10
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0010be2c
+         // (break)
+}
+///// FUNCTION 0x00098fdc
+int fcn.00098fdc (int esi, int edx) {
+    loc_0x98fdc:
+        // CALL XREF from fcn.0006633c @ +0x468
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x10
+        0x00098fe8
+        x9 = 0x125000
+        [var_10h_2] = x8
+        x8 = [x9 + 0xfa8] // 0xd0
+        x9 = 0x89a4
+        x9 = 0xf654
+        x9 = 0x104d   // 'M\x10'
+        x9 = 0xa42d
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00099020
+         // (break)
+}
+///// FUNCTION 0x000c494c
+int fcn.000c494c (int esi, int edx) {
+    loc_0xc494c:
+        // CALL XREF from fcn.0006633c @ +0x618
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000c4954
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x18
+        x8 = x8 - x9
+        x9 = 0x127000
+        [x8] = x10
+        x8 = [x9 + 0xb98] // 0xd0
+        x9 = 0x84c3
+        x9 = 0x140f   // '\x0f\x14'
+        x9 = 0x2e5b   // '[.'
+        x9 = 0x5c06
+        x8 = !x8
+        x10 = x8 | x9
+        x10 = x10 << 1
+        x8 = x8 ^ x9
+        x8 = x10 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000c49a4
+         // (break)
+}
+///// FUNCTION 0x00098f78
+int fcn.00098f78 (int esi, int edx) {
+    loc_0x98f78:
+        // CALL XREF from fcn.00066d8c @ +0x1ae4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x127000
+        0x00098f84
+        x8 = [x8 + 0xbd0] // 0xcf
+        x9 = 0x6640   // '@f'
+        x10 = 0xb320
+        x9 = 0x5477   // 'wT'
+        x10 = 0xaa3b
+        x9 = 0xa591
+        x10 = 0x52c8
+        x9 = 0x9e64
+        x10 = 0xcf32
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        w10 = 0x8
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        w8 = 0x20
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00098fd8
+         // (break)
+}
+///// FUNCTION 0x00031300
+int fcn.00031300 (int esi, int edx) {
+    loc_0x31300:
+        // CALL XREF from fcn.00066d8c @ +0x1b08
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        w8 = 0x20
+        0x0003130c
+        x9 = 0x12e000
+        [var_10h_2] = x8
+        x8 = [x9 + 0xf28] // 0xd0
+        x9 = 0xf0b9
+        x10 = 0xf0b9
+        x9 = 0x90d7
+        x10 = 0x90d7
+        x9 = 0x54bb
+        x10 = 0x54bb
+        x9 = 0xccc6
+        x10 = 0x4cc6
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00031354
+         // (break)
+}
+///// FUNCTION 0x000882e0
+int fcn.000882e0 (int esi, int edx) {
+    loc_0x882e0:
+        // CALL XREF from fcn.00066d8c @ +0x22dc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x1c
+        0x000882ec
+        x9 = 0x127000
+        [var_10h_2] = x8
+        x8 = [x9 + 0xb80] // 0xd0
+        x9 = 0xc899
+        x10 = 0xc899
+        x9 = 0x96f
+        x10 = 0x96f
+        x9 = 0x8d87
+        x10 = 0x8d87
+        x9 = 0xa6c2
+        x10 = 0x26c2
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00088334
+         // (break)
+}
+///// FUNCTION 0x000d2ba8
+int fcn.000d2ba8 (int esi, int edx) {
+    loc_0xd2ba8:
+        // CALL XREF from fcn.00069eec @ +0x184
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12e000
+        0x000d2bb4
+        x10 = [x10 + 0x7b0] // 0xd1 // str.QgEMG
+        x11 = 0x514b  // 'KQ'
+        x8 = x29 << 1
+        x11 = 0x4567  // 'gE'
+        x9 = x29 ^ 8
+        x11 = 0x474d  // 'MG'
+        x8 = x8 | 0x10
+        x11 = 0x1c8c
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 | x11
+        x9 = x9 ^ x11
+        x10 = x10 << 1
+        w11 = 0x8
+        x9 = x10 - x9
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000d2c00
+         // (break)
+}
+///// FUNCTION 0x000bebfc
+int fcn.000bebfc (int esi, int edx) {
+    loc_0xbebfc:
+        // CALL XREF from fcn.00069eec @ +0x33c
+        jmp 0xbf61c
+         // do {
+    loc_0xbf61c:
+        // CODE XREF from fcn.000bebfc @ 0xbebfc
+        jmp 0xbf5bc
+         // } while (?);
+        }
+        return eax;
+    loc_0x000bf5bc: // orphan
+             // CODE XREF from fcn.000bebfc @ 0xbf61c
+             x8 = 0x129000
+             x8 = x8 + 0xd88
+             x8 = [x8 + 0x310]        // pstate
+             br x8
+
+}
+///// FUNCTION 0x000c3570
+int fcn.000c3570 (int esi, int edx) {
+    loc_0xc3570:
+        // CALL XREF from fcn.00069eec @ +0x4d8
+        [sp, -0x50]! = (x26,2)
+        [sp, 0x10] = (x24,2)
+        [sp, 0x20] = (x22,2)
+        [sp, 0x30] = (x20,2)
+        [sp, 0x40] = (x29,2)
+        x29 = var_40h
+        sp = sp - 0x10
+        x22 = x4      // arg5
+        x20 = x3      // arg4
+        x19 = x2      // arg3
+        mrs x8,tpidr_el0
+        x8 = [x8 + 0x28] // 0x12f540
+        // elf_shdr
+        [x29 = x8
+        jmp 0xc4548
+         // do {
+    loc_0xc4548:
+        // CODE XREF from fcn.000c3570 @ 0xc35a4
+        x23 = sp - 0x10
+        sp = x23
+        jmp 0xc3a4c
+         // } while (?);
+        }
+        return eax;
+    loc_0x000c3614: // orphan
+             // CODE XREF from fcn.000c3570 @ 0xc36fc
+             x8 = 0x123000
+             x8 = x8 + 0x340
+             x8 = [x8 + 0x340]        // pstate
+             br x8
+
+    loc_0x000c36e4: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc45c4
+         if !w0 jmp 0xc36fc       // likely
+
+    loc_0x000c36e8: // orphan
+         jmp 0xc36ec
+
+    loc_0x000c36ec: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc36e8
+         w8 = w0 - 1              // arg1
+         b.eq 0xc43ec             // unlikely
+
+    loc_0x000c36f4: // orphan
+         jmp 0xc36f8
+
+    loc_0x000c36f8: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc36f4
+         jmp 0xc3ae0
+
+    loc_0x000c36fc: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc36e4
+         jmp 0xc3614
+
+    loc_0x000c3a4c: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc4550
+         x21 = sp - 1,lsl 12
+         sp = x21
+         jmp 0xc45c4
+
+    loc_0x000c3ae0: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc36f8
+         x8 = 0x129000
+         x8 = x8 + 0x488
+         x8 = [x8 + 0x240]        // pstate
+         br x8
+
+    loc_0x000c43ec: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc36f0
+         x8 = 0x122000
+         x8 = x8 + 0xcd0
+         x8 = [x8 + 0x268]        // pstate
+         br x8
+
+    loc_0x000c45c4: // orphan
+         // CODE XREF from fcn.000c3570 @ 0xc3a54
+         jmp 0xc36e4
+
+}
+///// FUNCTION 0x00033554
+int fcn.00033554 (int esi, int edx) {
+    loc_0x33554:
+        // CALL XREF from fcn.0006a7a0 @ +0x1630
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x124000
+        0x00033560
+        x8 = [x8 + 0xfb8] // 0xcf
+        x9 = 0x6803
+        x9 = 0x2f51   // 'Q/'
+        x9 = 0x7729   // ')w'
+        x9 = 0x3e8a
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 ^ x9
+        x9 = x11 << 1
+        w10 = 0x10
+        x8 = x9 - x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x00033598
+         // (break)
+}
+///// FUNCTION 0x000fe834
+int fcn.000fe834 (int esi, int edx) {
+    loc_0xfe834:
+        // CALL XREF from fcn.0006a7a0 @ +0x3590
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x121000
+        0x000fe840
+        x8 = [x8 + 0xa38] // 0xcf
+        x9 = 0x63dd
+        x9 = 0x4ef8
+        x9 = 0xec94
+        x9 = 0x4c84
+        x8 = !x8
+        x11 = x8 ^ x9
+        x8 = x8 & x9
+        w10 = 0x20
+        x8 = x11 + x8,lsl 1
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x000fe874
+         // (break)
+}
+///// FUNCTION 0x0004d6ac
+int fcn.0004d6ac (int esi, int edx) {
+    loc_0x4d6ac:
+        // CALL XREF from fcn.0006a7a0 @ +0x40e0
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        0x0004d6b4
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x4
+        x8 = x8 << 1
+        x11 = 0x12d000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xd68] // 0xd2
+        x9 = 0x3668   // 'h6'
+        x9 = 0xa387
+        x9 = 0xf603
+        x9 = 0x6456   // 'Vd'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0004d6fc
+         // (break)
+}
+///// FUNCTION 0x0009e8cc
+int fcn.0009e8cc (int esi, int edx) {
+    loc_0x9e8cc:
+        // CALL XREF from fcn.0006a7a0 @ +0x71a4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x122000
+        0x0009e8d8
+        x10 = [x10 + 0x240] // 0xd1
+        x11 = 0xdcb4
+        x11 = 0x3a98
+        x11 = 0xeb9b
+        x8 = x29 & 8
+        x11 = 0x4c47  // 'GL'
+        x9 = x29 ^ 8
+        w12 = 0x20
+        x8 = x8 << 1
+        x10 = x11 - x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x0009e910
+         // (break)
+}
+///// FUNCTION 0x000d7650
+int fcn.000d7650 (int esi, int edx) {
+    loc_0xd7650:
+        // CALL XREF from fcn.0006a7a0 @ +0xcea0
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x128000
+        0x000d765c
+        x8 = [x8 + 0xa90] // 0xcf
+        x11 = 0x7074  // 'tp'
+        x11 = 0x48b4
+        x11 = 0xcaf2
+        x11 = 0x138e
+        x8 = !x8
+        x12 = x8 | x11
+        x9 = x29 & 8
+        x8 = x8 ^ x11
+        x12 = x12 << 1
+        x10 = x29 ^ 8
+        w11 = 0x8
+        x9 = x9 << 1
+        x8 = x12 - x8
+        [x10 + x9] = x8
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000d76a4
+         // (break)
+}
+///// FUNCTION 0x0003fb4c
+int fcn.0003fb4c (int esi, int edx) {
+    loc_0x3fb4c:
+        // CALL XREF from fcn.0006a7a0 @ +0x10ec8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x0003fb58
+        x8 = [x8 + 0x468] // 0xcf
+        x9 = 0x30bb
+        x9 = 0xf9b5
+        x9 = 0x4e7e   // '~N'
+        x9 = 0x1fea
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x8
+        w11 = 0x14
+        x8 = x12 + x8
+        [x8 + x29] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0003fb94
+         // (break)
+}
+///// FUNCTION 0x000b6710
+int fcn.000b6710 (int esi, int edx) {
+    loc_0xb6710:
+        // CALL XREF from fcn.0006a7a0 @ +0x12348
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000b6718
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x28    // '('
+        x11 = 0x129000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x968] // 0xd2
+        x9 = 0x597c   // '|Y'
+        x9 = 0x32fe
+        x9 = 0x36ef
+        x9 = 0x7f53   // 'S\x7f'
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000b675c
+         // (break)
+}
+///// FUNCTION 0x000ff484
+int fcn.000ff484 (int esi, int edx) {
+    loc_0xff484:
+        // CALL XREF from fcn.0006a7a0 @ +0x134f8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ff48c
+        x8 = x29 << 1
+        x10 = 0x12c000
+        x9 = x29 ^ 8
+        x10 = [x10 + 0xec0] // 0xd1 // str.XJw
+        x8 = x8 | 0x10
+        x11 = 0xb2c0
+        x8 = x8 - x9
+        x9 = 0xd960
+        x11 = 0x9539
+        x9 = 0x4a9c
+        x11 = 0x16ee
+        x9 = 0x8b77
+        x11 = 0xd62f
+        x9 = 0xeb17
+        x10 = !x10
+        x11 = x11 | x10,lsl 1
+        x9 = x10 ^ x9
+        w10 = 0x14
+        x9 = x11 - x9
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000ff4e8
+         // (break)
+}
+///// FUNCTION 0x00101b64
+int fcn.00101b64 (int esi, int edx) {
+    loc_0x101b64:
+        // CALL XREF from fcn.0006a7a0 @ +0x14d90
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = segment.LOAD3 // 0x120000
+        0x00101b70
+        x9 = [x9 + 0x3f8] // 0xd0
+        x11 = 0xe61   // 'a\x0e' // "y_get"
+        x11 = 0xa7c5
+        x11 = 0xf54c
+        x11 = 0x3861  // 'a8'
+        x9 = !x9
+        x13 = x9 | x11
+        x9 = x9 ^ x11
+        x11 = x13 << 1
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x28    // '('
+        x9 = x11 - x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00101bb4
+         // (break)
+}
+///// FUNCTION 0x0007f780
+int fcn.0007f780 (int esi, int edx) {
+    loc_0x7f780:
+        // CALL XREF from fcn.0007f5f4 @ +0x184
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x8
+        0x0007f78c
+        x9 = 0x12f000
+        [var_10h_2] = x8
+        x8 = [x9 + 0x358] // 0xd0
+        x9 = 0xe480
+        x10 = 0xe480
+        x9 = 0x7554   // 'Tu'
+        x10 = 0x7554  // 'Tu'
+        x9 = 0x35ca
+        x10 = 0x35ca
+        x9 = 0xda2c
+        x10 = 0x5a2c  // ',Z'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0007f7d4
+         // (break)
+}
+///// FUNCTION 0x0004dacc
+int fcn.0004dacc (int esi, int edx) {
+    loc_0x4dacc:
+        // CALL XREF from fcn.0007f780 @ +0xaf4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0004dad4
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x8
+        x11 = 0x12e000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x3f0] // 0xd2
+        x9 = 0x596
+        x10 = 0x2cb   // "2462"
+        x9 = 0x40bc
+        x10 = 0xa05e
+        x9 = 0x345d   // ']4'
+        x10 = 0x1a2e  // '.\x1a'
+        x9 = 0xfba4
+        x10 = 0xfdd2
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0004db28
+         // (break)
+}
+///// FUNCTION 0x000ffc10
+int fcn.000ffc10 (int esi, int edx) {
+    loc_0xffc10:
+        // CALL XREF from fcn.0007f780 @ +0x206c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ffc18
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x24    // '$'
+        x11 = 0x121000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x380] // 0xd2
+        x9 = 0xc61e
+        x9 = 0xe5a8
+        x9 = 0x5ba8
+        x9 = 0x5ef9
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000ffc5c
+         // (break)
+}
+///// FUNCTION 0x000c49ec
+int fcn.000c49ec (int esi, int edx) {
+    loc_0xc49ec:
+        // CALL XREF from fcn.0007f780 @ +0x25a8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12a000
+        0x000c49f8
+        x8 = [x8 + 0x138] // 0xcf
+        x9 = 0xfc2    // "nit"
+        x9 = 0xe93
+        x9 = 0x4255   // 'UB'
+        x9 = 0x65b8
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x18
+        w11 = 0x28    // '('
+        x8 = x12 + x8
+        [x8 + x29] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000c4a34
+         // (break)
+}
+///// FUNCTION 0x0009b4b8
+int fcn.0009b4b8 (int esi, int edx) {
+    loc_0x9b4b8:
+        // CALL XREF from fcn.0008270c @ +0x2348
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x127000
+        0x0009b4c4
+        x8 = [x8 + 0x150] // 0xcf
+        x9 = 0x9141
+        x9 = 0xb605
+        x9 = 0x8561
+        x9 = 0x3338   // '83'
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x28     // '('
+        x8 = x10 - x8
+        w10 = 0x24    // '$'
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x0009b510
+         // (break)
+}
+///// FUNCTION 0x000c0d80
+int fcn.000c0d80 (int esi, int edx) {
+    loc_0xc0d80:
+        // CALL XREF from fcn.00088b88 @ +0x150
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x000c0d8c
+        x8 = [x8 + 0x938] // 0xcf
+        x9 = 0xcf71
+        x9 = 0x13ca
+        x9 = 0xfe4a
+        x9 = 0x2edb
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 & x8
+        w9 = 0x4
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        [x8 + x10] = x9
+        w8 = 0x10
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000c0dd4
+         // (break)
+}
+///// FUNCTION 0x0006a5dc
+int fcn.0006a5dc (int esi, int edx) {
+    loc_0x6a5dc:
+        // CALL XREF from fcn.00088b88 @ +0x658
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0006a5e4
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x18
+        x8 = x8 - x9
+        x9 = 0x124000
+        [x8] = x10
+        x8 = [x9 + 0x300] // 0xd0
+        x9 = 0xda48
+        x10 = 0xda48
+        x9 = 0xd502
+        x10 = 0xd502
+        x9 = 0x4eb4
+        x10 = 0x4eb4
+        x9 = 0x82d2
+        x10 = 0x2d2
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10 // elf_phdr
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0006a640
+         // (break)
+}
+///// FUNCTION 0x000cc898
+int fcn.000cc898 (int esi, int edx) {
+    loc_0xcc898:
+        // CALL XREF from fcn.000898d8 @ +0x1e20
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x18
+        0x000cc8a4
+        x9 = 0x123000
+        [var_10h_2] = x8
+        x8 = [x9 + 0x6a0] // 0xd0
+        x9 = 0xae2d
+        x9 = 0x3212   // '\x122'
+        x9 = 0x987f
+        x9 = 0x4a8b
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cc8dc
+         // (break)
+}
+///// FUNCTION 0x000b67dc
+int fcn.000b67dc (int esi, int edx) {
+    loc_0xb67dc:
+        // CALL XREF from fcn.000898d8 @ +0x22a4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x000b67e8
+        x8 = [x8 + 0xa40] // 0xcf
+        x9 = 0x39b5
+        x9 = 0x72d8
+        x9 = 0x51e2
+        x9 = 0xe52    // 'R\x0e'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x14
+        x8 = x10 - x8
+        w10 = 0xc
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000b6834
+         // (break)
+}
+///// FUNCTION 0x00088074
+int fcn.00088074 (int esi, int edx) {
+    loc_0x88074:
+        // CALL XREF from fcn.000898d8 @ +0x3610
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x00088080
+        x8 = [x8 + 0x50] // 0xcf
+        x9 = 0x7474   // 'tt'
+        x10 = 0x7474  // 'tt'
+        x9 = 0xfada
+        x10 = 0xfada
+        x9 = 0xcdfa
+        x10 = 0xcdfa
+        x9 = 0xe941
+        x10 = 0x6941  // 'Ai'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 & x8
+        w10 = 0x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        w8 = 0x4
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000880d8
+         // (break)
+}
+///// FUNCTION 0x0004bb3c
+int fcn.0004bb3c (int esi, int edx) {
+    loc_0x4bb3c:
+        // CALL XREF from fcn.000898d8 @ +0x44e0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x127000
+        0x0004bb48
+        x10 = [x10 + 0x4a8] // 0xd1
+        x11 = 0x75a8
+        x8 = x29 << 1
+        x11 = 0x3520  // ' 5'
+        x9 = x29 ^ 8
+        x11 = 0x5c4f  // 'O\\'
+        x8 = x8 | 0x10
+        x11 = 0x69bb
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 ^ x11
+        x9 = x9 & x11
+        w11 = 0x10
+        x9 = x10 + x9,lsl 1
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0004bb90
+         // (break)
+}
+///// FUNCTION 0x000a7d98
+int fcn.000a7d98 (int esi, int edx) {
+    loc_0xa7d98:
+        // CALL XREF from fcn.000898d8 @ +0x4658
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x000a7da4
+        x8 = [x8 + 0x3d8] // 0xcf
+        x9 = 0x1cc1
+        x9 = 0xf153
+        x9 = 0x215f   // '_!'
+        x9 = 0x1029   // ')\x10'
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0x20
+        w11 = 0x24    // '$'
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000a7de8
+         // (break)
+}
+///// FUNCTION 0x000ffa24
+int fcn.000ffa24 (int esi, int edx) {
+    loc_0xffa24:
+        // CALL XREF from fcn.000898d8 @ +0x55f8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12a000
+        0x000ffa30
+        x8 = [x8 + 0x860] // 0xcf
+        x9 = 0xb819
+        x9 = 0x466f   // 'oF'
+        x9 = 0x1097
+        x9 = 0x44b9
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 ^ x9
+        x10 = x10 << 1
+        x8 = x10 - x8
+        x10 = x29 & x8
+        w9 = 0x1c
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        [x8 + x10] = x9
+        w8 = 0x18
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000ffa7c
+         // (break)
+}
+///// FUNCTION 0x0004da80
+int fcn.0004da80 (int esi, int edx) {
+    loc_0x4da80:
+        // CALL XREF from fcn.000898d8 @ +0x65a4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x124000
+        0x0004da8c
+        x11 = 0x90e2
+        x10 = [x10 + 0xc08] // 0xd1 // str.xY_
+        x11 = 0x5978  // 'xY'
+        x8 = x29 << 1
+        x11 = 0xce20
+        x9 = x29 ^ 8
+        x11 = 0x91bb
+        x8 = x8 | 0x10
+        w12 = 0x20
+        x8 = x8 - x9
+        x9 = x11 - x10
+        [x8] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x0004dac8
+         // (break)
+}
+///// FUNCTION 0x0003dcd8
+int fcn.0003dcd8 (int esi, int edx) {
+    loc_0x3dcd8:
+        // CALL XREF from fcn.000898d8 @ +0x72c8
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        0x0003dce0
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x14
+        x11 = 0x12a000
+        [x8 + x9] = x10
+        x8 = [x11 + 0xc38] // 0xd2
+        x9 = 0x3e89
+        x9 = 0x1231   // '1\x12'
+        x9 = 0xee7a
+        x9 = 0x59e7
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003dd24
+         // (break)
+}
+///// FUNCTION 0x0002c1cc
+int fcn.0002c1cc (int esi, int edx) {
+    loc_0x2c1cc:
+        // CALL XREF from fcn.000898d8 @ +0x8440
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0002c1d4
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x24    // '$'
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x121000
+        x8 = [x8 + 0xf40] // 0xcf
+        x9 = 0xc958
+        x9 = 0x3895
+        x9 = 0x1b94
+        x9 = 0xf8e5
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0002c210
+         // (break)
+}
+///// FUNCTION 0x00048884
+int fcn.00048884 (int esi, int edx) {
+    loc_0x48884:
+        // CALL XREF from fcn.000898d8 @ +0x9370
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        w8 = 0x1c
+        0x00048890
+        [var_10h_2] = x8
+        x8 = 0x123000
+        x8 = [x8 + 0xf70] // 0xcf
+        x9 = 0x307d   // '}0'
+        x9 = 0x6c85
+        x9 = 0xefcd
+        x9 = 0x9926
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000488bc
+         // (break)
+}
+///// FUNCTION 0x000a9f8c
+int fcn.000a9f8c (int esi, int edx) {
+    loc_0xa9f8c:
+        // CALL XREF from fcn.000898d8 @ +0xa484
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000a9f94
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x28    // '('
+        x8 = x8 << 1
+        x11 = 0x128000
+        [x9 + x8] = x10
+        x8 = [x11 + 0x230] // 0xd2
+        x9 = 0x60fe
+        x9 = 0x2106
+        x9 = 0x45e
+        x9 = 0x80bd
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000a9fdc
+         // (break)
+}
+///// FUNCTION 0x000c0fd0
+int fcn.000c0fd0 (int esi, int edx) {
+    loc_0xc0fd0:
+        // CALL XREF from fcn.000898d8 @ +0xaa30
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000c0fd8
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x18
+        x11 = 0x126000
+        [x8 + x9] = x10
+        x8 = [x11 + 0xdf0] // 0xd2
+        x9 = 0x8be8
+        x10 = 0xc5f4
+        x9 = 0x51af
+        x10 = 0x28d7
+        x9 = 0x65c6
+        x10 = 0xb2e3
+        x9 = 0x6f01
+        x10 = 0xb780
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000c102c
+         // (break)
+}
+///// FUNCTION 0x000cc834
+int fcn.000cc834 (int esi, int edx) {
+    loc_0xcc834:
+        // CALL XREF from fcn.000898d8 @ +0xc454
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x000cc840
+        x8 = [x8 + 0x978] // 0xcf
+        x9 = 0xa88f
+        x10 = 0xa88f
+        x9 = 0xceaa
+        x10 = 0xceaa
+        x9 = 0xcad4
+        x10 = 0xcad4
+        x9 = 0xb93c
+        x10 = 0x393c  // '<9'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        w10 = 0x28    // '('
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        w8 = 0x10
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cc894
+         // (break)
+}
+///// FUNCTION 0x000b61bc
+int fcn.000b61bc (int esi, int edx) {
+    loc_0xb61bc:
+        // CALL XREF from fcn.000991b8 @ +0x16b4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x121000
+        0x000b61c8
+        x8 = [x8 + 0xeb0] // 0xcf
+        x9 = 0x8d
+        x9 = 0x23a6
+        x9 = 0x2eaf
+        x9 = 0xfeea
+        w10 = 0x8
+        x8 = x9 - x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x000b61f0
+         // (break)
+}
+///// FUNCTION 0x00031484
+int fcn.00031484 (int esi, int edx) {
+    loc_0x31484:
+        // CALL XREF from fcn.0009b514 @ +0xec
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x00031490
+        x8 = [x8 + 0x58] // 0xcf
+        x9 = 0x7f78   // 'x\x7f'
+        x9 = 0x1ddc
+        x9 = 0x3297
+        x9 = 0x4dd0
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0x20
+        w11 = 0x10
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000314d4
+         // (break)
+}
+///// FUNCTION 0x00108bc4
+int fcn.00108bc4 (int esi, int edx) {
+    loc_0x108bc4:
+        // CALL XREF from fcn.0009b514 @ +0xc94
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x124000
+        0x00108bd0
+        x10 = [x10 + 0xbc8] // 0xd1
+        x11 = 0x497f  // '\x7fI'
+        x11 = 0x1183
+        x11 = 0x2380
+        x11 = 0x1ab
+        x10 = !x10
+        x8 = x29 & 8
+        x13 = x10 | x11
+        x10 = x10 & x11
+        x9 = x29 ^ 8
+        w12 = 0x20
+        x8 = x8 << 1
+        x10 = x13 + x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00108c14
+         // (break)
+}
+///// FUNCTION 0x0009b030
+int fcn.0009b030 (int esi, int edx) {
+    loc_0x9b030:
+        // CALL XREF from fcn.0009b514 @ +0x1a20
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x125000
+        0x0009b03c
+        x8 = [x8 + 0xfb8] // 0xcf
+        x9 = 0xa750
+        x10 = 0x53a8
+        x9 = 0xb534
+        x10 = 0x5a9a
+        x9 = 0xf738
+        x10 = 0xfb9c
+        x9 = 0xa82f
+        x10 = 0xd417
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        w11 = 0x18
+        x8 = x9 - x8
+        [x29] = (x11,2)
+        (x29, 2) = 3  // sp
+        0x0009b080
+         // (break)
+}
+///// FUNCTION 0x000cca40
+int fcn.000cca40 (int esi, int edx) {
+    loc_0xcca40:
+        // CALL XREF from fcn.0009b514 @ +0x321c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = segment.LOAD3 // 0x120000
+        0x000cca4c
+        x9 = [x9 + 0x30] // 0xd0
+        x11 = 0x7184
+        x11 = 0xea82
+        x11 = 0x4241  // 'AB'
+        x11 = 0x28ab
+        x9 = !x9
+        x13 = x9 ^ x11
+        x9 = x9 & x11
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x1c
+        x9 = x13 + x9,lsl 1
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000cca8c
+         // (break)
+}
+///// FUNCTION 0x000a7ab8
+int fcn.000a7ab8 (int esi, int edx) {
+    loc_0xa7ab8:
+        // CALL XREF from fcn.0009e8cc @ +0x12c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12e000
+        0x000a7ac4
+        x8 = [x8 + 0x370] // 0xcf
+        x9 = 0x58cf
+        x9 = 0xd83b
+        x9 = 0x96ba
+        x9 = 0x862
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 ^ x9
+        x10 = x10 << 1
+        x8 = x10 - x8
+        w9 = 0x10
+        x10 = x29 | x8
+        x8 = x29 & x8
+        [x10 + x8] = x9
+        w8 = 0x1c
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000a7b0c
+         // (break)
+}
+///// FUNCTION 0x00087fb4
+int fcn.00087fb4 (int esi, int edx) {
+    loc_0x87fb4:
+        // CALL XREF from fcn.0009e8cc @ +0x3760
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12e000
+        0x00087fc0
+        x8 = [x8 + 0xb08] // 0xcf
+        x9 = 0x3e27   // ''>'
+        x10 = 0x3e27  // ''>'
+        x9 = 0x590a   // '\nY'
+        x10 = 0x590a  // '\nY'
+        x9 = 0xfab
+        x10 = 0xfab
+        x9 = 0xa60d
+        x10 = 0x260d  // '\r&'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 | x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        w10 = 0x18
+        x8 = x9 - x8
+        w9 = 0x4
+        [x8] = x10
+        [x29] = x9
+        (x29, 2) = 3  // sp
+        0x0008801c
+         // (break)
+}
+///// FUNCTION 0x000b0acc
+int fcn.000b0acc (int esi, int edx) {
+    loc_0xb0acc:
+        // CALL XREF from fcn.0009e8cc @ +0x4c0c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x122000
+        0x000b0ad8
+        x8 = [x8 + 0x8e0] // 0xcf // str.e_e
+        x9 = 0x286d   // 'm('
+        x9 = 0x231b   // ''
+        x9 = 0xaad0
+        x9 = 0x5501
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 ^ x9
+        x10 = x10 << 1
+        x8 = x10 - x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x8
+        x8 = x10 - x8
+        w10 = 0x4
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000b0b28
+         // (break)
+}
+///// FUNCTION 0x0002c75c
+int fcn.0002c75c (int esi, int edx) {
+    loc_0x2c75c:
+        // CALL XREF from fcn.0009e8cc @ +0x4e50
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x24     // '$'
+        0x0002c768
+        [var_10h_2] = x8
+        x8 = 0x126000
+        x8 = [x8 + 0xde8] // 0xcf
+        x9 = 0xd050
+        x9 = 0x60f5
+        x9 = 0x8953
+        x9 = 0x6a9d
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0002c794
+         // (break)
+}
+///// FUNCTION 0x0006633c
+int fcn.0006633c (int esi, int edx) {
+    loc_0x6633c:
+        // CALL XREF from fcn.0009e8cc @ +0x6918
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x121000
+        0x00066348
+        x8 = [x8 + 0xed0] // 0xcf
+        x9 = 0xc261
+        x9 = 0x525a   // 'ZR'
+        x9 = 0x28f
+        x9 = 0xc064
+        x8 = x9 - x8
+        x9 = x29 & x8
+        w10 = 0x18
+        w11 = 0x28    // '('
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00066384
+         // (break)
+}
+///// FUNCTION 0x00108c68
+int fcn.00108c68 (int esi, int edx) {
+    loc_0x108c68:
+        // CALL XREF from fcn.000a7d98 @ +0xab8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x121000
+        0x00108c74
+        x10 = [x10 + 0xf30] // 0xd1
+        x11 = 0xc90e
+        x8 = x29 << 1
+        x11 = 0x8adf
+        x9 = x29 ^ 8
+        x11 = 0x40e7
+        x8 = x8 | 0x10
+        x11 = 0x1163  // 'c\x11'
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 | x11
+        x9 = x9 & x11
+        w11 = 0x4
+        x9 = x10 + x9
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00108cbc
+         // (break)
+}
+///// FUNCTION 0x00098eec
+int fcn.00098eec (int esi, int edx) {
+    loc_0x98eec:
+        // CALL XREF from fcn.000aa13c @ +0x314c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00098ef4
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x28    // '('
+        [x8 + x9] = x10
+        x8 = segment.LOAD3 // 0x120000
+        x8 = [x8 + 0x3d0] // 0xcf
+        x9 = 0x473
+        x9 = 0xe1fe
+        x9 = 0x1af2
+        x9 = 0xee45
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00098f2c
+         // (break)
+}
+///// FUNCTION 0x0010be30
+int fcn.0010be30 (int esi, int edx) {
+    loc_0x10be30:
+        // CALL XREF from fcn.000aa13c @ +0x3b7c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0010be38
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x4
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x12e000
+        x8 = [x8 + 0x3d8] // 0xcf
+        x9 = 0x4b70   // 'pK'
+        x9 = 0x29a1
+        x9 = 0xad69
+        x9 = 0x4196
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0010be74
+         // (break)
+}
+///// FUNCTION 0x000b664c
+int fcn.000b664c (int esi, int edx) {
+    loc_0xb664c:
+        // CALL XREF from fcn.000aa13c @ +0x58c4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x000b6658
+        x8 = [x8 + 0xc40] // 0xcf
+        x9 = 0x1db3
+        x10 = 0x1db3
+        x9 = 0xd15b
+        x10 = 0xd15b
+        x9 = 0x3b10   // '\x10//'
+        x10 = 0x3b10  // '\x10//'
+        x9 = 0xe7f9
+        x10 = 0x67f9
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 & x8
+        w10 = 0x10
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        w8 = 0x14
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000b66b0
+         // (break)
+}
+///// FUNCTION 0x000cfa80
+int fcn.000cfa80 (int esi, int edx) {
+    loc_0xcfa80:
+        // CALL XREF from fcn.000aa13c @ +0x5b9c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000cfa88
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0xc
+        [x8 + x9] = x10
+        x8 = 0x121000
+        x8 = [x8 + 0xee0] // 0xcf
+        x9 = 0x55f3
+        x9 = 0xabe0
+        x9 = 0x3f5a   // 'Z?'
+        x9 = 0x8ed5
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cfac0
+         // (break)
+}
+///// FUNCTION 0x0009b514
+int fcn.0009b514 (int esi, int edx) {
+    loc_0x9b514:
+        // CALL XREF from fcn.000b0acc @ +0x150
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x124000
+        0x0009b520
+        x8 = [x8 + 0x2b8] // 0xcf
+        x9 = 0xf111
+        x9 = 0x1731   // '1\x17'
+        x9 = 0x248
+        x9 = 0x4ca1
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0x20
+        w11 = 0x24    // '$'
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0009b564
+         // (break)
+}
+///// FUNCTION 0x000b59a0
+int fcn.000b59a0 (int esi, int edx) {
+    loc_0xb59a0:
+        // CALL XREF from fcn.000b119c @ +0x1194
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x123000
+        0x000b59ac
+        x8 = [x8 + 0x20] // 0xcf
+        x10 = 0x22ec
+        x10 = 0xb5c6
+        x10 = 0x2266  // 'f\"'
+        w9 = 0x18
+        x10 = 0x1f16  // '\x16\x1f'
+        w11 = 0x20
+        x8 = x29 - x8
+        [x8 + x10] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000b59dc
+         // (break)
+}
+///// FUNCTION 0x000b633c
+int fcn.000b633c (int esi, int edx) {
+    loc_0xb633c:
+        // CALL XREF from fcn.000b119c @ +0x3458
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x9 = 0x12e000
+        0x000b6348
+        x9 = [x9 + 0xfa0] // 0xd0
+        x11 = 0x253e  // '>%'
+        x11 = 0x4ace
+        x11 = 0xdfc6
+        x11 = 0xf670
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x20
+        x9 = x11 - x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000b637c
+         // (break)
+}
+///// FUNCTION 0x0004f238
+int fcn.0004f238 (int esi, int edx) {
+    loc_0x4f238:
+        // CALL XREF from fcn.000b61bc @ +0x174
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x12a000
+        0x0004f244
+        x8 = [x8 + 0x130] // 0xcf
+        x9 = 0xbda
+        x9 = 0x5f9b
+        x9 = 0x19a5
+        x9 = 0xd48    // 'H\r'
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0x4
+        w11 = 0x28    // '('
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0004f288
+         // (break)
+}
+///// FUNCTION 0x0009b084
+int fcn.0009b084 (int esi, int edx) {
+    loc_0x9b084:
+        // CALL XREF from fcn.000b6900 @ +0x197c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x122000
+        0x0009b090
+        x8 = [x8 + 0x590] // 0xcf
+        x9 = 0x23e6
+        x9 = 0xbc75
+        x9 = 0x5ab6
+        x9 = 0x5ad8
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x20
+        x8 = x10 - x8
+        w10 = 0x24    // '$'
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x0009b0dc
+         // (break)
+}
+///// FUNCTION 0x0004da28
+int fcn.0004da28 (int esi, int edx) {
+    loc_0x4da28:
+        // CALL XREF from fcn.000b6900 @ +0x3988
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x129000
+        0x0004da34
+        x10 = [x10 + 0x130] // 0xd1
+        x11 = 0xa742
+        x8 = x29 << 1
+        x11 = 0x8778
+        x9 = x29 ^ 8
+        x11 = 0x8dea
+        x8 = x8 | 0x10
+        x11 = 0x46bf
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 ^ x11
+        x9 = x9 & x11
+        w11 = 0xc
+        x9 = x10 + x9,lsl 1
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0004da7c
+         // (break)
+}
+///// FUNCTION 0x00098d70
+int fcn.00098d70 (int esi, int edx) {
+    loc_0x98d70:
+        // CALL XREF from fcn.000b6900 @ +0x3ae0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00098d78
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0xc
+        x11 = 0x125000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x7c0] // 0xd2
+        x9 = 0x5e62   // 'b^'
+        x10 = 0x5e62  // 'b^'
+        x9 = 0x9f36
+        x10 = 0x9f36
+        x9 = 0xe3b8
+        x10 = 0xe3b8
+        x9 = 0xa0dd
+        x10 = 0x20dd
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00098dcc
+         // (break)
+}
+///// FUNCTION 0x000be614
+int fcn.000be614 (int esi, int edx) {
+    loc_0xbe614:
+        // CALL XREF from fcn.000b6900 @ +0x53c8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x12a000
+        0x000be620
+        x9 = [x9 + 0x868] // 0xd0
+        x11 = 0x9e64
+        x11 = 0x5895
+        x11 = 0x7b5
+        x11 = 0x54f6
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x8
+        x9 = x11 - x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000be654
+         // (break)
+}
+///// FUNCTION 0x0007f5f4
+int fcn.0007f5f4 (int esi, int edx) {
+    loc_0x7f5f4:
+        // CALL XREF from fcn.000b6900 @ +0x5dd0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x0007f600
+        x8 = [x8 + 0xc08] // 0xcf
+        x9 = 0x1f7a   // 'z\x1f'
+        x9 = 0x585c   // '\\X'
+        x9 = 0x61b4
+        x9 = 0xd4f5
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x14
+        x8 = x11 + x8
+        [x8 + x29] = x10
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x0007f638
+         // (break)
+}
+///// FUNCTION 0x00031194
+int fcn.00031194 (int esi, int edx) {
+    loc_0x31194:
+        // CALL XREF from fcn.000bebfc @ +0x15a0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12e000
+        0x000311a0
+        x10 = [x10 + 0xf98] // 0xd1
+        x11 = 0xdeb9
+        x11 = 0xe2f7
+        x11 = 0x8765
+        x11 = 0x2730  // '0''
+        x10 = !x10
+        x8 = x29 & 8
+        x13 = x10 | x11
+        x10 = x10 & x11
+        x9 = x29 ^ 8
+        w12 = 0x8
+        x8 = x8 << 1
+        x10 = x13 + x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000311e4
+         // (break)
+}
+///// FUNCTION 0x0002c798
+int fcn.0002c798 (int esi, int edx) {
+    loc_0x2c798:
+        // CALL XREF from fcn.000c0fd0 @ +0x1984
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x125000
+        0x0002c7a4
+        x9 = [x9 + 0x850] // 0xd0
+        x11 = 0xc78b
+        x12 = 0xc78b
+        x11 = 0x3ce6
+        x12 = 0x3ce6
+        x11 = 0xd483
+        x12 = 0xd483
+        x11 = 0xa8f7
+        x12 = 0x28f7
+        x9 = !x9
+        x8 = x29 & 8
+        x11 = x9 ^ x11
+        x9 = x9 & x12
+        x10 = x29 ^ 8
+        w12 = 0x28    // '('
+        x8 = x8 << 1
+        x9 = x11 + x9,lsl 1
+        [x10 + x8] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x0002c7f8
+         // (break)
+}
+///// FUNCTION 0x0003dc98
+int fcn.0003dc98 (int esi, int edx) {
+    loc_0x3dc98:
+        // CALL XREF from fcn.000c3570 @ +0x4f0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x0003dca4
+        x8 = [x8 + 0xc80] // 0xcf
+        x10 = 0x8f6b
+        x10 = 0x5370  // 'pS'
+        x10 = 0x3239  // '92'
+        w9 = 0x28     // '('
+        x10 = 0x776f  // 'ow'
+        w11 = 0x10
+        x8 = x29 - x8
+        [x8 + x10] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0003dcd4
+         // (break)
+}
+///// FUNCTION 0x0003d998
+int fcn.0003d998 (int esi, int edx) {
+    loc_0x3d998:
+        // CALL XREF from fcn.000c4a38 @ +0x9f8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0003d9a0
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x1c
+        x8 = x8 << 1
+        x11 = 0x12e000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xf90] // 0xd2
+        x9 = 0x1803
+        x9 = 0x9777
+        x9 = 0xfbd6
+        x9 = 0x3270   // 'p2'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003d9e8
+         // (break)
+}
+///// FUNCTION 0x00048a04
+int fcn.00048a04 (int esi, int edx) {
+    loc_0x48a04:
+        // CALL XREF from fcn.000c4a38 @ +0x38dc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12f000
+        0x00048a10
+        x10 = [x10 + 0x368] // 0xd1
+        x11 = 0xb959  // U(pstr 0x00000b6c) "8\fK"
+        x11 = 0x40ea
+        x11 = 0xde15
+        x8 = x29 & 8
+        x11 = 0x7a46  // 'Fz'
+        x9 = x29 ^ 8
+        w12 = 0xc
+        x8 = x8 << 1
+        x10 = x11 - x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00048a48
+         // (break)
+}
+///// FUNCTION 0x000b1058
+int fcn.000b1058 (int esi, int edx) {
+    loc_0xb1058:
+        // CALL XREF from fcn.000c4a38 @ +0x41c0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12d000
+        0x000b1064
+        x8 = [x8 + 0xd70] // 0xcf
+        x9 = 0x314a   // 'J1'
+        x9 = 0x67b0
+        x9 = 0xf06
+        x9 = 0x9405
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 & x8
+        w9 = 0x10
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        [x8 + x10] = x9
+        w8 = 0x28     // '('
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000b10ac
+         // (break)
+}
+///// FUNCTION 0x000c0f74
+int fcn.000c0f74 (int esi, int edx) {
+    loc_0xc0f74:
+        // CALL XREF from fcn.000c975c @ +0x1ed0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x121000
+        0x000c0f80
+        x8 = [x8 + 0xe08] // 0xcf
+        x9 = 0x2b3a   // ':+'
+        x9 = 0x390f   // '\x0f9'
+        x9 = 0x65af
+        x9 = 0x243a   // ':$'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x4
+        x8 = x10 - x8
+        w10 = 0x10
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000c0fcc
+         // (break)
+}
+///// FUNCTION 0x000cf818
+int fcn.000cf818 (int esi, int edx) {
+    loc_0xcf818:
+        // CALL XREF from fcn.000c975c @ +0x30a8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x000cf824
+        x8 = [x8 + 0x918] // 0xcf
+        x9 = 0xeecd
+        x9 = 0x3a96
+        x9 = 0xe936
+        x9 = 0x61e4
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        w10 = 0xc
+        w11 = 0x14
+        x8 = x12 + x8,lsl 1
+        [x8 + x29] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000cf860
+         // (break)
+}
+///// FUNCTION 0x00100e6c
+int fcn.00100e6c (int esi, int edx) {
+    loc_0x100e6c:
+        // CALL XREF from fcn.000cce0c @ +0x244
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x121000
+        0x00100e78
+        x8 = [x8 + 0xf48] // 0xcf // str.eil_b
+        x9 = 0x6971   // 'qi'
+        x9 = 0x86c
+        x9 = 0x17cb
+        x9 = 0xdff8
+        w10 = 0xc
+        x8 = x9 - x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x00100ea0
+         // (break)
+}
+///// FUNCTION 0x0003dd34
+int fcn.0003dd34 (int esi, int edx) {
+    loc_0x3dd34:
+        // CALL XREF from fcn.000cce0c @ +0x1b9c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0003dd3c
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0xc
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x12d000
+        x8 = [x8 + 0xa90] // 0xcf
+        x9 = 0x3f96
+        x10 = 0x9fcb
+        x9 = 0xa641
+        x10 = 0xd320
+        x9 = 0x8837
+        x10 = 0xc41b
+        x9 = 0xd961
+        x10 = 0xecb0
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003dd94
+         // (break)
+}
+///// FUNCTION 0x00089564
+int fcn.00089564 (int esi, int edx) {
+    loc_0x89564:
+        // CALL XREF from fcn.000cf818 @ +0xb8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x121000
+        0x00089570
+        x9 = [x9 + 0xe00] // 0xd0
+        x11 = 0x5c7f  // '\x7f\\'
+        x11 = 0x1cae
+        x11 = 0xa808
+        x11 = 0x1cc1
+        x9 = !x9
+        x13 = x9 | x11
+        x9 = x9 ^ x11
+        x11 = x13 << 1
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0x18
+        x9 = x11 - x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000895b4
+         // (break)
+}
+///// FUNCTION 0x000a9e58
+int fcn.000a9e58 (int esi, int edx) {
+    loc_0xa9e58:
+        // CALL XREF from fcn.000cfa80 @ +0x1b1c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x000a9e64
+        x8 = [x8 + 0x760] // 0xcf
+        x9 = 0x39d9
+        x9 = 0x87f3
+        x9 = 0x8718
+        x9 = 0xd97f
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x24     // '$'
+        x8 = x10 - x8
+        w10 = 0x10
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000a9eb0
+         // (break)
+}
+///// FUNCTION 0x000c975c
+int fcn.000c975c (int esi, int edx) {
+    loc_0xc975c:
+        // CALL XREF from fcn.000d3f84 @ +0x74c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12a000
+        0x000c9768
+        x8 = [x8 + 0xf88] // 0xcf
+        x9 = 0x5b28   // '(['
+        x10 = 0x2d94
+        x9 = 0xe5da
+        x10 = 0x72ed
+        x9 = 0xb1b0
+        x10 = 0xd8d8
+        x9 = 0x9a61
+        x10 = 0xcd30
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        w11 = 0xc
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x11
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000c97b8
+         // (break)
+}
+///// FUNCTION 0x0009b0e0
+int fcn.0009b0e0 (int esi, int edx) {
+    loc_0x9b0e0:
+        // CALL XREF from fcn.000d3f84 @ +0xfe0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x0009b0ec
+        x8 = [x8 + 0x3a8] // 0xcf
+        x9 = 0xf1e2
+        x10 = 0x78f1  // (pstr 0x00000dc2) "NI_OnLoad"
+        x9 = 0x54f8
+        x10 = 0x2a7c  // '|*'
+        x9 = 0xed74
+        x10 = 0x76ba
+        x9 = 0x13a6
+        x10 = 0x89d3
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        w11 = 0xc
+        x8 = x9 - x8
+        [x29] = (x11,2)
+        (x29, 2) = 3  // sp
+        0x0009b130
+         // (break)
+}
+///// FUNCTION 0x000d3f84
+int fcn.000d3f84 (int esi, int edx) {
+    loc_0xd3f84:
+        // CALL XREF from fcn.000d3f84 @ +0x35b4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x121000
+        0x000d3f90
+        x9 = [x9 + 0xf38] // 0xd0
+        x11 = 0xd696
+        x12 = 0x6b4b  // 'Kk'
+        x11 = 0xcbf6
+        x12 = 0x65fb
+        x11 = 0x77c2
+        x12 = 0x3be1
+        x11 = 0xe1a0
+        x12 = 0xf0d0
+        x9 = !x9
+        x8 = x29 & 8
+        x11 = x11 | x9,lsl 1
+        x9 = x9 ^ x12
+        x10 = x29 ^ 8
+        w12 = 0x18
+        x8 = x8 << 1
+        x9 = x11 - x9
+        [x10 + x8] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000d3fe4
+         // (break)
+}
+///// FUNCTION 0x0004d9ec
+int fcn.0004d9ec (int esi, int edx) {
+    loc_0x4d9ec:
+        // CALL XREF from fcn.000d7650 @ +0x1bcc
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0xc
+        0x0004d9f8
+        [var_10h_2] = x8
+        x8 = 0x129000
+        x8 = [x8 + 0x948] // 0xcf
+        x9 = 0xcd1b
+        x9 = 0xbcb8
+        x9 = 0x38d3
+        x9 = 0x9fcb
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0004da24
+         // (break)
+}
+///// FUNCTION 0x0002c214
+int fcn.0002c214 (int esi, int edx) {
+    loc_0x2c214:
+        // CALL XREF from fcn.000d9578 @ +0x1050
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x10 = 0x126000
+        0x0002c220
+        x10 = [x10 + 0xdc8] // 0xd1
+        x11 = 0xa042
+        x8 = x29 << 1
+        x11 = 0xfb0f
+        x9 = x29 ^ 8
+        x11 = 0x6ffb
+        x8 = x8 | 0x10
+        x11 = 0x58c1
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 ^ x11
+        x9 = x9 & x11
+        w11 = 0x20
+        x9 = x10 + x9,lsl 1
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0002c268
+         // (break)
+}
+///// FUNCTION 0x0004bb94
+int fcn.0004bb94 (int esi, int edx) {
+    loc_0x4bb94:
+        // CALL XREF from fcn.000d9578 @ +0x6570
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        0x0004bb9c
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0xc
+        x11 = segment.LOAD3 // 0x120000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x8d8] // 0xd2
+        x9 = 0xfc61
+        x9 = 0x7d2b   // '+}'
+        x9 = 0xd2e8
+        x9 = 0x50c8
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0004bbe0
+         // (break)
+}
+///// FUNCTION 0x0010fc60
+int fcn.0010fc60 (int esi, int edx) {
+    loc_0x10fc60:
+        // CALL XREF from fcn.000d9578 @ +0xa574
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0010fc68
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x18
+        x8 = x8 << 1
+        x11 = 0x129000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xd68] // 0xd2
+        x9 = 0x73e3
+        x9 = 0xb661
+        x9 = 0x30a2
+        x9 = 0x80d9
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0010fcb0
+         // (break)
+}
+///// FUNCTION 0x000d3d34
+int fcn.000d3d34 (int esi, int edx) {
+    loc_0xd3d34:
+        // CALL XREF from fcn.000d9578 @ +0xb9d8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000d3d3c
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0xc
+        x8 = x8 - x9
+        [x8] = x10
+        x8 = segment.LOAD3 // 0x120000
+        x8 = [x8 + 0x8e0] // 0xcf
+        x9 = 0x3b7d   // '}//'
+        x9 = 0x7267   // 'gr'
+        x9 = 0xe41f
+        x9 = 0x82d3
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000d3d7c
+         // (break)
+}
+///// FUNCTION 0x000cf8dc
+int fcn.000cf8dc (int esi, int edx) {
+    loc_0xcf8dc:
+        // CALL XREF from fcn.000d9578 @ +0xc548
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x000cf8e8
+        x8 = [x8 + 0xa48] // 0xcf
+        x9 = 0x2c2b   // '+,'
+        x10 = 0x2c2b  // '+,'
+        x9 = 0x4eee
+        x10 = 0x4eee
+        x9 = 0x8f3c
+        x10 = 0x8f3c
+        x9 = 0xa80e
+        x10 = 0x280e  // '\x0e('
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 & x8
+        w10 = 0x10
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        w8 = 0x24     // '$'
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cf940
+         // (break)
+}
+///// FUNCTION 0x0003d934
+int fcn.0003d934 (int esi, int edx) {
+    loc_0x3d934:
+        // CALL XREF from fcn.000d9578 @ +0xdb8c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x127000
+        0x0003d940
+        x8 = [x8 + 0xe88] // 0xcf
+        x9 = 0xbb6a
+        x10 = 0x5db5
+        x9 = 0xed0
+        x10 = 0x768
+        x9 = 0xdc2a
+        x10 = 0x6e15  // '\x15n'
+        x9 = 0x3104
+        x10 = 0x9882
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        x8 = x9 - x8
+        w10 = 0x18
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        w8 = 0x24     // '$'
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003d994
+         // (break)
+}
+///// FUNCTION 0x000cc8e0
+int fcn.000cc8e0 (int esi, int edx) {
+    loc_0xcc8e0:
+        // CALL XREF from fcn.000d9578 @ +0x1194c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x9 = 0x12d000
+        0x000cc8ec
+        x9 = [x9 + 0xa78] // 0xd0
+        x11 = 0x72e2
+        x11 = 0xed1
+        x11 = 0xd38f
+        x11 = 0x105a  // 'Z\x10'
+        x8 = x29 | 8
+        x10 = x29 & 8
+        w12 = 0xc
+        x9 = x11 - x9
+        [x8 + x10] = x9
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000cc920
+         // (break)
+}
+///// FUNCTION 0x000cf6cc
+int fcn.000cf6cc (int esi, int edx) {
+    loc_0xcf6cc:
+        // CALL XREF from fcn.000d9578 @ +0x136e8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        w8 = 0x8
+        0x000cf6d8
+        x9 = 0x121000
+        [var_10h_2] = x8
+        x8 = [x9 + 0xed8] // 0xd0
+        x9 = 0x6e74   // 'tn'
+        x9 = 0xbfeb
+        x9 = 0x5733   // '3W'
+        x9 = 0xe964
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cf710
+         // (break)
+}
+///// FUNCTION 0x000d3724
+int fcn.000d3724 (int esi, int edx) {
+    loc_0xd3724:
+        // CALL XREF from fcn.000ef858 @ +0x678
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000d372c
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x14
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x125000
+        x8 = [x8 + 0xc48] // 0xcf
+        x9 = 0xa0f3
+        x9 = 0xb7a4
+        x9 = 0x9f87
+        x9 = 0x1592
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000d3768
+         // (break)
+}
+///// FUNCTION 0x000ccdb8
+int fcn.000ccdb8 (int esi, int edx) {
+    loc_0xccdb8:
+        // CALL XREF from fcn.000ef858 @ +0x1960
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000ccdc0
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x24    // '$'
+        x8 = x8 << 1
+        x11 = 0x122000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xcc0] // 0xd2
+        x9 = 0x8b22
+        x9 = 0x1895
+        x9 = 0x6aab
+        x9 = 0x1e93
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000cce08
+         // (break)
+}
+///// FUNCTION 0x0009b330
+int fcn.0009b330 (int esi, int edx) {
+    loc_0x9b330:
+        // CALL XREF from fcn.000ef858 @ +0x2780
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x0009b33c
+        x8 = [x8 + 0xdd0] // 0xcf
+        x9 = 0xa2e2
+        x9 = 0xdbd6
+        x9 = 0xd9cb
+        x9 = 0x1a6a   // 'j\x1a'
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        x8 = x12 + x8
+        w10 = 0x18
+        w11 = 0x8
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0009b380
+         // (break)
+}
+///// FUNCTION 0x000d9520
+int fcn.000d9520 (int esi, int edx) {
+    loc_0xd9520:
+        // CALL XREF from fcn.000ef858 @ +0x38c4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12a000
+        0x000d952c
+        x10 = [x10 + 0x168] // 0xd1
+        x11 = 0xe65   // 'e\x0e' // "t"
+        x8 = x29 << 1
+        x11 = 0xc07d
+        x9 = x29 ^ 8
+        x11 = 0x49e6
+        x8 = x8 | 0x10
+        x11 = 0x70d1
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 | x11
+        x9 = x9 & x11
+        w11 = 0x8
+        x9 = x10 + x9
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000d9574
+         // (break)
+}
+///// FUNCTION 0x00101b10
+int fcn.00101b10 (int esi, int edx) {
+    loc_0x101b10:
+        // CALL XREF from fcn.000ef858 @ +0x4868
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00101b18
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x20
+        x8 = x8 << 1
+        x11 = 0x123000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xf88] // 0xd2
+        x9 = 0x2f1c   // '\x1c/'
+        x9 = 0x1c50   // 'P\x1c'
+        x9 = 0xcf87
+        x9 = 0x15ae
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00101b60
+         // (break)
+}
+///// FUNCTION 0x0003fd34
+int fcn.0003fd34 (int esi, int edx) {
+    loc_0x3fd34:
+        // CALL XREF from fcn.000ef858 @ +0x5158
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0003fd3c
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x8
+        x11 = 0x126000
+        [x8 + x9] = x10
+        x8 = [x11 + 0xa60] // 0xd2
+        x9 = 0x3aa5
+        x9 = 0xb703
+        x9 = 0x2a80
+        x9 = 0xb5fd
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003fd80
+         // (break)
+}
+///// FUNCTION 0x000a9f30
+int fcn.000a9f30 (int esi, int edx) {
+    loc_0xa9f30:
+        // CALL XREF from sym.JNI_OnLoad @ +0x28f8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x000a9f3c
+        x8 = [x8 + 0x878] // 0xcf
+        x9 = 0x71af
+        x9 = 0x7547   // 'Gu'
+        x9 = 0x74e3
+        x9 = 0x7560   // '`u'
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        x10 = x29 | x8
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        w9 = 0x24     // '$'
+        x8 = x10 - x8
+        w10 = 0x10
+        [x8] = x9
+        [x29] = x10
+        (x29, 2) = 3  // sp
+        0x000a9f88
+         // (break)
+}
+///// FUNCTION 0x000662ec
+int fcn.000662ec (int esi, int edx) {
+    loc_0x662ec:
+        // CALL XREF from sym.JNI_OnLoad @ +0x2ae8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x122000
+        0x000662f8
+        x8 = [x8 + 0x8c8] // 0xcf
+        x9 = 0x6733   // '3g'
+        x9 = 0xa2ba
+        x9 = 0xea08
+        x9 = 0x14d1
+        x8 = x9 - x8
+        x9 = x29 | x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        w10 = 0x14
+        w11 = 0x4
+        x8 = x9 - x8
+        [x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00066338
+         // (break)
+}
+///// FUNCTION 0x0010fbfc
+int fcn.0010fbfc (int esi, int edx) {
+    loc_0x10fbfc:
+        // CALL XREF from sym.JNI_OnLoad @ +0x2e70
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0010fc04
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0xc
+        x8 = x8 << 1
+        [x9 + x8] = x10
+        x8 = 0x126000
+        x8 = [x8 + 0x3a0] // 0xcf
+        x9 = 0x4743   // 'CG'
+        x10 = 0x4743  // 'CG'
+        x9 = 0xcf7a
+        x10 = 0xcf7a
+        x9 = 0xffe9
+        x10 = 0xffe9
+        x9 = 0xbf6d
+        x10 = 0x3f6d  // 'm?'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0010fc5c
+         // (break)
+}
+///// FUNCTION 0x000b6900
+int fcn.000b6900 (int esi, int edx) {
+    loc_0xb6900:
+        // CALL XREF from sym.JNI_OnLoad @ +0x40c8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12a000
+        0x000b690c
+        x8 = [x8 + 0x1c8] // 0xcf
+        x9 = 0x6832   // '2h'
+        x9 = 0x1e78   // 'x\x1e'
+        x9 = 0x12b2
+        x9 = 0x47e3
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0x4
+        w11 = 0x28    // '('
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000b6950
+         // (break)
+}
+///// FUNCTION 0x0003fb08
+int fcn.0003fb08 (int esi, int edx) {
+    loc_0x3fb08:
+        // CALL XREF from fcn.00101338 @ +0x3f0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x0003fb10
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x1c
+        [x8 + x9] = x10
+        x8 = 0x12e000
+        x8 = [x8 + 0x48] // 0xcf
+        x9 = 0xf606
+        x9 = 0x8020
+        x9 = 0x3354   // 'T3'
+        x9 = 0x7f17   // '\x17\x7f'
+        x8 = x9 - x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x0003fb48
+         // (break)
+}
+///// FUNCTION 0x00066d8c
+int fcn.00066d8c (int esi, int edx) {
+    loc_0x66d8c:
+        // CALL XREF from fcn.00101338 @ +0x464
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x126000
+        0x00066d98
+        x10 = [x10 + 0x3b0] // 0xd1
+        x11 = 0x28da
+        x11 = 0xedb5
+        x11 = 0xae1c
+        x11 = 0x1964  // 'd\x19'
+        x10 = !x10
+        x8 = x29 & 8
+        x13 = x10 | x11
+        x10 = x10 & x11
+        x9 = x29 ^ 8
+        w12 = 0x4
+        x8 = x8 << 1
+        x10 = x13 + x10
+        [x9 + x8] = x10
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00066ddc
+         // (break)
+}
+///// FUNCTION 0x000334f4
+int fcn.000334f4 (int esi, int edx) {
+    loc_0x334f4:
+        // CALL XREF from fcn.00101b64 @ +0x154
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000334fc
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w10 = 0x14
+        x11 = 0x126000
+        [x8 + x9] = x10
+        x8 = [x11 + 0x360] // 0xd2
+        x9 = 0x7cd3
+        x10 = 0x7cd3
+        x9 = 0xeeb2
+        x10 = 0xeeb2
+        x9 = 0x427b   // '{B'
+        x10 = 0x427b  // '{B'
+        x9 = 0xf112
+        x10 = 0x7112  // '\x12q'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00033550
+         // (break)
+}
+///// FUNCTION 0x00100ea4
+int fcn.00100ea4 (int esi, int edx) {
+    loc_0x100ea4:
+        // CALL XREF from fcn.00101d98 @ +0xda8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x125000
+        0x00100eb0
+        x8 = [x8 + 0x18] // 0xcf
+        x9 = 0x613
+        x10 = 0x613
+        x9 = 0xdf7d
+        x10 = 0xdf7d
+        x9 = 0xf263
+        x10 = 0xf263
+        x9 = 0xbbb1
+        x10 = 0x3bb1
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        x9 = x29 | x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        w10 = 0x24    // '$'
+        x8 = x9 - x8
+        w9 = 0x10
+        [x8] = x10
+        [x29] = x9
+        (x29, 2) = 3  // sp
+        0x00100f0c
+         // (break)
+}
+///// FUNCTION 0x001012e0
+int fcn.001012e0 (int esi, int edx) {
+    loc_0x1012e0:
+        // CALL XREF from fcn.00103568 @ +0xac
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x126000
+        0x001012ec
+        x10 = [x10 + 0x380] // 0xd1
+        x11 = 0xfe38
+        x8 = x29 << 1
+        x11 = 0x256a  // 'j%'
+        x9 = x29 ^ 8
+        x11 = 0xd920
+        x8 = x8 | 0x10
+        x11 = 0x7339  // '9s'
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 | x11
+        x9 = x9 & x11
+        w11 = 0xc
+        x9 = x10 + x9
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00101334
+         // (break)
+}
+///// FUNCTION 0x00101958
+int fcn.00101958 (int esi, int edx) {
+    loc_0x101958:
+        // CALL XREF from fcn.00103568 @ +0x7d0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x00101960
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x14
+        x8 = x8 << 1
+        x11 = 0x12d000
+        [x9 + x8] = x10
+        x8 = [x11 + 0xaa8] // 0xd2
+        x9 = 0xb652
+        x9 = 0x586e   // 'nX'
+        x9 = 0xf030
+        x9 = 0xc027
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x001019a8
+         // (break)
+}
+///// FUNCTION 0x000ccc64
+int fcn.000ccc64 (int esi, int edx) {
+    loc_0xccc64:
+        // CALL XREF from fcn.00103568 @ +0xcd0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x124000
+        0x000ccc70
+        x10 = [x10 + 0x3a8] // 0xd1
+        x11 = 0x15f8
+        x12 = 0x8afc
+        x11 = 0xf6cd
+        x12 = 0x7b66  // 'f{'
+        x11 = 0x7522  // '\"u'
+        x12 = 0x3a91
+        x11 = 0x8a1a
+        x12 = 0xc50d
+        x10 = !x10
+        x11 = x11 | x10,lsl 1
+        x10 = x10 ^ x12
+        x8 = x29 | 8
+        x9 = x29 & 8
+        w13 = 0x14
+        x10 = x11 - x10
+        [x8 + x9] = x10
+        [x29] = x13
+        (x29, 2) = 3  // sp
+        0x000cccc0
+         // (break)
+}
+///// FUNCTION 0x00040278
+int fcn.00040278 (int esi, int edx) {
+    loc_0x40278:
+        // CALL XREF from fcn.00103568 @ +0x3118
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12f000
+        0x00040284
+        x8 = [x8 + 0x2d0] // 0xcf
+        x9 = 0xc596
+        x10 = 0xc596
+        x9 = 0x378f
+        x10 = 0x378f
+        x9 = 0xfcb5
+        x10 = 0xfcb5
+        x9 = 0xdd0c
+        x10 = 0x5d0c  // '\f]'
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        x8 = x9 + x8,lsl 1
+        w10 = 0xc
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        w8 = 0x20
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000402d8
+         // (break)
+}
+///// FUNCTION 0x00088b88
+int fcn.00088b88 (int esi, int edx) {
+    loc_0x88b88:
+        // CALL XREF from fcn.00103568 @ +0x38f4
+        [sp, -0x10]! = (x29,2) // (pstr 0x00000020) "@"
+        x29 = sp
+        x8 = 0x124000
+        0x00088b94
+        x8 = [x8 + 0x3a0] // 0xcf
+        x9 = 0x39b7
+        x9 = 0x1f25   // '%\x1f'
+        x9 = 0x65c3
+        x9 = 0x7f07
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        x10 = x29 & x8
+        w9 = 0xc
+        x8 = x29 ^ x8
+        x10 = x10 << 1
+        [x8 + x10] = x9
+        w8 = 0x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x00088bdc
+         // (break)
+}
+///// FUNCTION 0x000d36d0
+int fcn.000d36d0 (int esi, int edx) {
+    loc_0xd36d0:
+        // CALL XREF from fcn.00108c68 @ +0x173c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x12e000
+        0x000d36dc
+        x8 = [x8 + 0x368] // 0xcf
+        x9 = 0x3396
+        x9 = 0x1a59   // 'Y\x1a'
+        x9 = 0x5631   // '1V'
+        x9 = 0x2ce9
+        x8 = !x8
+        x12 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x12 + x8,lsl 1
+        w10 = 0xc
+        w11 = 0x18
+        x9 = x29 | x8
+        x8 = x29 & x8
+        [x9 + x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000d3720
+         // (break)
+}
+///// FUNCTION 0x000c4a38
+int fcn.000c4a38 (int esi, int edx) {
+    loc_0xc4a38:
+        // CALL XREF from fcn.00108c68 @ +0x2bc0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x129000
+        0x000c4a44
+        x8 = [x8 + 0xd60] // 0xcf
+        x9 = 0x5531   // '1U'
+        x9 = 0xff9e
+        x9 = 0x3148   // 'H1'
+        x9 = 0x1f08
+        x8 = !x8
+        x11 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x1c
+        x8 = x11 + x8
+        [x29] = (x10,2)
+        (x29, 2) = 3  // sp
+        0x000c4a78
+         // (break)
+}
+///// FUNCTION 0x000d94cc
+int fcn.000d94cc (int esi, int edx) {
+    loc_0xd94cc:
+        // CALL XREF from fcn.0010bf5c @ +0x106c
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000d94d4
+        x8 = x29 & 8
+        x9 = x29 ^ 8
+        w10 = 0x8
+        x8 = x8 << 1
+        x11 = 0x124000
+        [x9 + x8] = x10
+        x8 = [x11 + 0x2d8] // 0xd2
+        x9 = 0x546d   // 'mT'
+        x9 = 0xa83c
+        x9 = 0xbc16
+        x9 = 0x3b55   // 'U//'
+        x8 = !x8
+        x10 = x8 | x9
+        x8 = x8 & x9
+        x8 = x10 + x8
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000d951c
+         // (break)
+}
+///// FUNCTION 0x000b5948
+int fcn.000b5948 (int esi, int edx) {
+    loc_0xb5948:
+        // CALL XREF from fcn.0010bf5c @ +0x36c4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        0x000b5950
+        x8 = x29 << 1
+        x9 = x29 ^ 8
+        x8 = x8 | 0x10
+        w10 = 0x10
+        x8 = x8 - x9
+        x9 = segment.LOAD3 // 0x120000
+        [x8] = x10
+        x8 = [x9 + 0x20] // 0xd0
+        x9 = 0x84ec
+        x9 = 0x201b   // ''
+        x9 = 0x5d15   // '\x15]'
+        x9 = 0x7303
+        x8 = !x8
+        x10 = x8 ^ x9
+        x8 = x8 & x9
+        x8 = x10 + x8,lsl 1
+        [x29] = x8
+        (x29, 2) = 3  // sp
+        0x000b599c
+         // (break)
+}
+///// FUNCTION 0x000a9e00
+int fcn.000a9e00 (int esi, int edx) {
+    loc_0xa9e00:
+        // CALL XREF from fcn.0010fa4c @ +0xb4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x121000
+        0x000a9e0c
+        x10 = [x10 + 0xeb8] // 0xd1
+        x11 = 0x6415  // '\x15d'
+        x8 = x29 << 1
+        x11 = 0x2674  // 't&'
+        x9 = x29 ^ 8
+        x11 = 0x286a  // 'j('
+        x8 = x8 | 0x10
+        x11 = 0x3f6d  // 'm?'
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 ^ x11
+        x9 = x9 & x11
+        w11 = 0x14
+        x9 = x10 + x9,lsl 1
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000a9e54
+         // (break)
+}
+///// FUNCTION 0x00098e90
+int fcn.00098e90 (int esi, int edx) {
+    loc_0x98e90:
+        // CALL XREF from fcn.0010fc60 @ +0xaf8
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x00098e9c
+        x8 = [x8 + 0x3c0] // 0xcf
+        x9 = 0x8209
+        x10 = 0x8209
+        x9 = 0x2905
+        x10 = 0x2905
+        x9 = 0xfddf
+        x10 = 0xfddf
+        x9 = 0x9481
+        x10 = 0x1481
+        x8 = !x8
+        x9 = x8 ^ x9
+        x8 = x8 & x10
+        w11 = 0x10
+        w12 = 0x24    // '$'
+        x8 = x9 + x8,lsl 1
+        [x8 + x29] = x11
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x00098ee8
+         // (break)
+}
+///// FUNCTION 0x000cce0c
+int fcn.000cce0c (int esi, int edx) {
+    loc_0xcce0c:
+        // CALL XREF from fcn.0010fc60 @ +0x10d0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x000cce18
+        x8 = [x8 + 0x400] // 0xcf
+        x9 = 0xc0e2
+        x10 = 0x6071  // 'q`'
+        x9 = 0xe834
+        x10 = 0xf41a
+        x9 = 0xb9c7
+        x10 = 0xdce3
+        x9 = 0xb56b
+        x10 = 0xdab5
+        x8 = !x8
+        x9 = x9 | x8,lsl 1
+        x8 = x8 ^ x10
+        w11 = 0x18
+        w12 = 0x8
+        x8 = x9 - x8
+        [x8 + x29] = x11
+        [x29] = x12
+        (x29, 2) = 3  // sp
+        0x000cce64
+         // (break)
+}
+///// FUNCTION 0x00101338
+int fcn.00101338 (int esi, int edx) {
+    loc_0x101338:
+        // CALL XREF from fcn.0010fc60 @ +0x21a4
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x00101344
+        x8 = [x8 + 0x68] // 0xcf
+        x9 = 0xd95a
+        x9 = 0x6cb6
+        x9 = 0x1be7
+        x9 = 0x856d
+        x8 = x9 - x8
+        x9 = x29 | x8
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        w10 = 0x24    // '$'
+        w11 = 0x28    // '('
+        x8 = x9 - x8
+        [x8] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x00101384
+         // (break)
+}
+///// FUNCTION 0x0003d9ec
+int fcn.0003d9ec (int esi, int edx) {
+    loc_0x3d9ec:
+        // CALL XREF from fcn.0010fc60 @ +0x57c0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = segment.LOAD3 // 0x120000
+        0x0003d9f8
+        x8 = [x8 + 0x8c8] // 0xcf
+        x9 = 0x9455
+        x9 = 0xe145
+        x9 = 0xb2d7
+        x9 = 0x95c1
+        x8 = !x8
+        x12 = x8 | x9
+        x8 = x8 & x9
+        w10 = 0x28    // '('
+        w11 = 0x4
+        x8 = x12 + x8
+        [x8 + x29] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x0003da34
+         // (break)
+}
+///// FUNCTION 0x000b66b4
+int fcn.000b66b4 (int esi, int edx) {
+    loc_0xb66b4:
+        // CALL XREF from fcn.0010fc60 @ +0x7834
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x10 = 0x12e000
+        0x000b66c0
+        x10 = [x10 + 0x7a8] // 0xd1
+        x11 = 0x2f3
+        x8 = x29 << 1
+        x11 = 0xb564
+        x9 = x29 ^ 8
+        x11 = 0xf318
+        x8 = x8 | 0x10
+        x11 = 0x27e
+        x8 = x8 - x9
+        x9 = !x10
+        x10 = x9 | x11
+        x9 = x9 ^ x11
+        x10 = x10 << 1
+        w11 = 0x24    // '$'
+        x9 = x10 - x9
+        [x8] = x9
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000b670c
+         // (break)
+}
+///// FUNCTION 0x000c0e30
+int fcn.000c0e30 (int esi, int edx) {
+    loc_0xc0e30:
+        // CALL XREF from fcn.0010fc60 @ +0x87a0
+        [sp, -0x10]! = (x29,2)
+        x29 = sp
+        x8 = 0x126000
+        0x000c0e3c
+        x8 = [x8 + 0x778] // 0xcf
+        x9 = 0x55e1
+        x9 = 0xc72b
+        x9 = 0x92fa
+        x9 = 0x5046   // 'FP'
+        x8 = x9 - x8
+        x9 = x29 & x8
+        w10 = 0xc
+        w11 = 0x10
+        x8 = x29 ^ x8
+        x9 = x9 << 1
+        [x8 + x9] = x10
+        [x29] = x11
+        (x29, 2) = 3  // sp
+        0x000c0e78
+         // (break)
+}
+///// FUNCTION 0x00118f70
+int fcn.00118f70 (int esi, int edx) {
+    loc_0x118f70:
+        // CALL XREFS from sym.__emutls_get_address @ 0x119054, 0x119164
+        [sp, -0x30]! = (x29,2)
+        x29 = sp
+        [sp, 0x10] = (x19,2)
+        x20 = [x0 + 8] // pstate // arg1
+        [var_20h] = x21
+        x21 = x0      // arg1
+        if (x20 == 8)
+        x0 = [x0]     // 0xc7 // arg1
+        b.hi 0x118fb0 // unlikely
+            
+    loc_0x118fb0:
+        x0 = x20 + x0 // arg1
+        x0 = x0 + 7   // size_t size
+        sym.imp.malloc ()
+        //  void *malloc(?)
+        if !x0 jmp 0x118fa0 // unlikely
+            
+    loc_0x118fa0:
+        sym.imp.abort ()
+         // do {
+    loc_0x118fa4:
+        [x0] = x0
+        x19 = x0 + 8
+        jmp 0x118fd4
+         // } while (?);
+         // } while (?);
+         // } while (?);
+        }
+        return eax;
+    loc_0x00118fd4: // orphan
+             // CODE XREF from fcn.00118f70 @ 0x118fac
+             x1 = [x21 + 0x18]        // 0x2c000
+                                      // segment.LOAD1
+             x0 = x19
+             x2 = [x21]               // 0xdc
+             if !x1 jmp 0x118fec      // likely
+
+    loc_0x00118fe4: // orphan
+         sym.imp.memcpy ()
+                                  // void *memcpy(-1, -1, ?)
+         jmp 0x118ff4
+
+    loc_0x00118fec: // orphan
+         w1 = 0
+         sym.imp.memset ()
+                                  // void *memset(-1, -1, ?)
+
+    loc_0x00118ff4: // orphan
+         // CODE XREF from fcn.00118f70 @ 0x118fe8
+         x0 = x19
+         x21 = [var_20h]          // pstate
+         (x19, 2) = 3
+         (x29, 2) = 3
+         
+
+}
+///// FUNCTION 0x001191c0
+int fcn.001191c0 (int esi, int edx) {
+    loc_0x1191c0:
+        // XREFS(46)
+        [sp, -0x10]! = (x16,2) // [14] -r-x section size 400 named .plt
+        x16 = segment.GNU_RELRO // 0x11c000
+        x17 = [x16 + 0x230] // pstate
+        x16 = x16 + 0x230
+        br x17
+         // (break)
+}

@@ -1,0 +1,933 @@
+{
+  "schema": "kick-native-deps/1",
+  "app": {
+    "package": "com.kick.mobile",
+    "version": "40.32.1",
+    "versionCode": 60006965,
+    "expo_sdk": "58",
+    "react_native": "0.88.0-rc.3",
+    "hermes_bytecode": 99,
+    "apk_sha256": "41b45d80108c01b4bf2ceafb07cfe916e20d7b929bf5fff1d3b3e21470c4d83d"
+  },
+  "confidence_legend": {
+    "exact": "version read from the APK itself (BuildConfig, .version/.properties, JS constant, build path) and/or the shipped .so is byte-identical to that release (binary_verified=true)",
+    "inferred": "taken from the pinned toolchain/framework this app was built with (e.g. React Native's own dependency table); not seen in the APK",
+    "range": "Expo SDK 58 bundled version range; true patch version not recoverable",
+    "unresolved": "unknown"
+  },
+  "libs": [
+    {
+      "lib": "libreactnative.so",
+      "abi": "arm64-v8a",
+      "size": 7049088,
+      "sha256": "0a108cd36ab33974758ff4a1391cb278ceb8e1ed3710abb0a873271120fff52b",
+      "project": "React Native",
+      "kind": "third-party",
+      "version": "0.88.0-rc.3",
+      "confidence": "exact",
+      "evidence": [
+        "build-path string in libappmodules.so: react-android-0.88.0-rc.3-release",
+        "JS bundle constant '0.88.0-rc.3'",
+        "gesturehandler BuildConfig REACT_NATIVE_MINOR_VERSION=88",
+        "byte-identical (sha256) to the .so in com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native",
+        "version": "0.88.0-rc.3"
+      },
+      "binary": {
+        "type": "maven",
+        "coordinate": "com.facebook.react:react-android:0.88.0-rc.3",
+        "repo": "rn",
+        "has_sources_jar": false,
+        "aar_suffix": "-release"
+      },
+      "read_source_at": "package/ReactAndroid and package/ReactCommon inside the npm tarball",
+      "role": "RN core native (Fabric, TurboModules, uimanager, yoga, folly glue)",
+      "binary_verified": true,
+      "verified_against": "com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+    },
+    {
+      "lib": "libbarhopper_v3.so",
+      "abi": "arm64-v8a",
+      "size": 4946720,
+      "sha256": "ec09597e9eb3aee0eb55ae3366da0d4ba416f5aa35a1af0b3811f50ff46743a1",
+      "project": "Google ML Kit barcode scanning (bundled model)",
+      "kind": "third-party",
+      "version": "17.3.0",
+      "confidence": "exact",
+      "evidence": [
+        "barcode-scanning.properties version=17.3.0",
+        "vision-common 17.3.0",
+        "assets/mlkit_barcode_models present (bundled variant)",
+        "byte-identical (sha256) to the .so in com.google.mlkit:barcode-scanning:17.3.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.google.mlkit:barcode-scanning:17.3.0",
+        "repo": "google",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source",
+      "binary_verified": true,
+      "verified_against": "com.google.mlkit:barcode-scanning:17.3.0 (google)"
+    },
+    {
+      "lib": "libplayercore.so",
+      "abi": "arm64-v8a",
+      "size": 3648752,
+      "sha256": "cdfc5ed12aed8f42c86a677d5e2daa87233cd8362184c3f696a15646f2c00ef8",
+      "project": "Amazon IVS Player (Android)",
+      "kind": "third-party",
+      "version": "1.54.1",
+      "confidence": "exact",
+      "evidence": [
+        "com/kick/mobile/kickivsplayerv2/BuildConfig.IVS_PLAYER_VERSION = 1.54.1",
+        "byte-identical (sha256) to the .so in com.amazonaws:ivs-player:1.54.1 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.amazonaws:ivs-player:1.54.1",
+        "repo": "central",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source; binary only. Kick wraps it in com.kick.mobile.kickivsplayerv2 (decompiled in java/).",
+      "binary_verified": true,
+      "verified_against": "com.amazonaws:ivs-player:1.54.1 (central)"
+    },
+    {
+      "lib": "libhermesvm.so",
+      "abi": "arm64-v8a",
+      "size": 2704136,
+      "sha256": "d4ccaf2523cd3b938e295646a5bcf927e134cbd6e4c4f9e3a6fd26d8d85e8217",
+      "project": "Hermes JS engine",
+      "kind": "third-party",
+      "version": "260318099.0.4 (ships with RN 0.88.0-rc.3)",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 sdks/hermes-engine/version.properties HERMES_VERSION_NAME=260318099.0.4",
+        "npm dep hermes-compiler 260318099.0.4",
+        "bundle bytecode version 99",
+        "byte-identical (sha256) to the .so in com.facebook.hermes:hermes-android:260318099.0.4 (rn)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.hermes:hermes-android:260318099.0.4",
+        "repo": "rn",
+        "has_sources_jar": false,
+        "aar_suffix": "-release"
+      },
+      "also": {
+        "type": "npm",
+        "package": "hermes-compiler",
+        "version": "260318099.0.4"
+      },
+      "note": "Engine source lives in github.com/facebook/hermes (not reachable from the sandbox at time of analysis); the RN npm tarball only has the glue.",
+      "role": "engine that runs assets/index.android.bundle",
+      "binary_verified": true,
+      "verified_against": "com.facebook.hermes:hermes-android:260318099.0.4 (rn)"
+    },
+    {
+      "lib": "libappmodules.so",
+      "abi": "arm64-v8a",
+      "size": 2253672,
+      "sha256": "eaacc6a45401c5d71e2449934f3178fe264543ebe619ca623b50878c8355e0cc",
+      "project": "RN app codegen aggregate (autolinked modules' TurboModule/Fabric glue)",
+      "kind": "third-party-glue",
+      "version": "0.88.0-rc.3 codegen output",
+      "confidence": "exact",
+      "evidence": [
+        "build path react-android-0.88.0-rc.3-release in strings",
+        "contains only codegen for: react-native-svg, react-native-screens, react-native-webview, react-native-gesture-handler, react-native-reanimated, react-native-worklets, @react-native-async-storage, @react-native-firebase (app/auth/analytics/crashlytics/messaging/utils), @react-native-google-signin, @datadog/mobile-react-native, react-native-share, react-native-get-random-values",
+        "no Kick-specific symbols or strings found"
+      ],
+      "source": {
+        "type": "none",
+        "note": "generated at app build time from the packages listed; read each package instead"
+      },
+      "note": "NOT Kick-owned code. Earlier note called it 'likely Kick' - corrected."
+    },
+    {
+      "lib": "libreanimated.so",
+      "abi": "arm64-v8a",
+      "size": 1654112,
+      "sha256": "d93293352691ff5ba6924bc293eb9189991b6a442ab2c1c798d6c58032a15633",
+      "project": "react-native-reanimated",
+      "kind": "third-party",
+      "version": "4.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "com/swmansion/reanimated/BuildConfig.REANIMATED_VERSION_JAVA = 4.7.0",
+        "JS bundle jsVersion '4.7.0'",
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) also lists 4.7.0"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-reanimated",
+        "version": "4.7.0"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libexpo-modules-core.so",
+      "abi": "arm64-v8a",
+      "size": 1585512,
+      "sha256": "0d529465383c74f45fdeb9623f53e21ab841e481bfd1e4295ff504eaf69d8920",
+      "project": "expo-modules-core (core)",
+      "kind": "third-party",
+      "version": "58.0.14",
+      "confidence": "exact",
+      "evidence": [
+        "expo/modules/BuildConfig.EXPO_MODULES_CORE_VERSION = 58.0.14",
+        "CMakeLists in the npm package builds this lib"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "expo-modules-core",
+        "version": "58.0.14"
+      },
+      "read_source_at": "package/android and package/common"
+    },
+    {
+      "lib": "libc++_shared.so",
+      "abi": "arm64-v8a",
+      "size": 1292904,
+      "sha256": "3e852764502d06e0cf1080d532ae7c608b7649d946a3a9d7e84e3d4b7d683214",
+      "project": "LLVM libc++ from Android NDK",
+      "kind": "third-party",
+      "version": "NDK 27.1.12297006",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml ndkVersion=27.1.12297006",
+        "other libs report 'Linker: LLD 18.0.2' (NDK r27 toolchain)",
+        "byte-identical (sha256) to the .so in com.facebook.fbjni:fbjni:0.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fbjni:fbjni:0.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "note": "same bytes also ship in the fbjni and react-android AARs; no standalone libc++ artifact",
+      "binary_verified": true,
+      "verified_against": "com.facebook.fbjni:fbjni:0.7.0 (central)"
+    },
+    {
+      "lib": "libworklets.so",
+      "abi": "arm64-v8a",
+      "size": 1288288,
+      "sha256": "d63b30e8326e3209a312c0799896097853b0e1177f3ecdae97748a7af169037b",
+      "project": "react-native-worklets",
+      "kind": "third-party",
+      "version": "0.13.0",
+      "confidence": "exact",
+      "evidence": [
+        "JS bundle constant '0.13.0'",
+        "reanimated 4.7.0 peerDependency react-native-worklets 0.13.x",
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists 0.13.0"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-worklets",
+        "version": "0.13.0"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "liba5c7.so",
+      "abi": "arm64-v8a",
+      "size": 1243904,
+      "sha256": "3f049b7114f35ccb583b379c5ba5bce82a5c3d4c9bc721b04a11293e86781621",
+      "project": "UNIDENTIFIED (protected/obfuscated native library)",
+      "kind": "unknown",
+      "version": "UNRESOLVED",
+      "confidence": "unresolved",
+      "evidence": [
+        "no Java/dex/resource reference to the name 'a5c7' found; loader unknown",
+        "only JNI_OnLoad exported; imports fork/execv/waitpid/prctl/sigaction/dlopen/mprotect/__system_property_*",
+        "disassembly shows constant-XOR opaque predicates (obfuscation); radare2 recovers only 180 functions",
+        "no strings naming a vendor or Kick"
+      ],
+      "source": {
+        "type": "none"
+      },
+      "note": "Likely a runtime-protection / anti-tamper / device-integrity SDK. See native/liba5c7/."
+    },
+    {
+      "lib": "libreact_codegen_rnscreens.so",
+      "abi": "arm64-v8a",
+      "size": 1214176,
+      "sha256": "6f98dba5cdba81fcdab4e83a516c6ae903e84431fbff07c503e9eded5a917902",
+      "project": "react-native-screens codegen",
+      "kind": "third-party",
+      "version": "~4.29.0",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~4.29.0"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-screens",
+        "version": "4.29.0"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libcrashlytics-common.so",
+      "abi": "arm64-v8a",
+      "size": 864616,
+      "sha256": "2f759a20ed003c50ff4120f7ca3ee56e603bfba6f656fdb617136561bc409ef7",
+      "project": "Firebase Crashlytics NDK",
+      "kind": "third-party",
+      "version": "20.1.0",
+      "confidence": "exact",
+      "evidence": [
+        "com/google/firebase/crashlytics/ndk/BuildConfig.VERSION_NAME = 20.1.0",
+        "byte-identical (sha256) to the .so in com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.google.firebase:firebase-crashlytics-ndk:20.1.0",
+        "repo": "google",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source; binary only",
+      "binary_verified": true,
+      "verified_against": "com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+    },
+    {
+      "lib": "libreact_codegen_rnsvg.so",
+      "abi": "arm64-v8a",
+      "size": 768600,
+      "sha256": "9f9dc39de2cb25da6769265c2067c13971b7ed71592f32a74f2bb1384e9b3998",
+      "project": "react-native-svg codegen",
+      "kind": "third-party",
+      "version": "15.15.5",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists exactly 15.15.5 (pinned, not tilde)",
+        "not independently confirmed in the APK"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-svg",
+        "version": "15.15.5"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libexpo-kolibri.so",
+      "abi": "arm64-v8a",
+      "size": 759120,
+      "sha256": "0e166adbc093a4ce9e307f8aeedc4decef65b70d27fad946ae5d1b437b43a446",
+      "project": "expo-modules-core (kolibri JSI object layer)",
+      "kind": "third-party",
+      "version": "58.0.14",
+      "confidence": "exact",
+      "evidence": [
+        "expo/modules/BuildConfig.EXPO_MODULES_CORE_VERSION = 58.0.14",
+        "CMakeLists in the npm package builds this lib"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "expo-modules-core",
+        "version": "58.0.14"
+      },
+      "read_source_at": "package/android and package/common"
+    },
+    {
+      "lib": "libzstd-kmp.so",
+      "abi": "arm64-v8a",
+      "size": 731872,
+      "sha256": "10ec47f13bee884450b0911066019ba7aa6b4164a4c1f8c33c9d30dd3fd8868a",
+      "project": "zstd-kmp (Zstandard JNI binding, Square)",
+      "kind": "third-party",
+      "version": "0.4.0",
+      "confidence": "exact",
+      "evidence": [
+        "package com.squareup.zstd; JNI symbols Java_com_squareup_zstd_*",
+        "no version string in dex/resources, so resolved by hashing: libzstd-kmp.so is byte-identical to zstd-kmp-android 0.4.0 and differs from 0.2.0/0.3.0 where fetchable"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.squareup.zstd:zstd-kmp-android:0.4.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.squareup.zstd:zstd-kmp-android:0.4.0 (central)"
+    },
+    {
+      "lib": "libnative-imagetranscoder.so",
+      "abi": "arm64-v8a",
+      "size": 585376,
+      "sha256": "2aed28298a25afd52ac670cf9682398c6c7ba42a57195c01efd565e7ddfe17ca",
+      "project": "Fresco (native image transcoder)",
+      "kind": "third-party",
+      "version": "3.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fresco=3.7.0 (RN pins it; app has no override seen)",
+        "byte-identical (sha256) to the .so in com.facebook.fresco:nativeimagetranscoder:3.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fresco:nativeimagetranscoder:3.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.facebook.fresco:nativeimagetranscoder:3.7.0 (central)"
+    },
+    {
+      "lib": "libstatic-webp.so",
+      "abi": "arm64-v8a",
+      "size": 502112,
+      "sha256": "bfce3139342fad716d25623b559d9901fc795d6b7622ebe21a417b4c84e3a92a",
+      "project": "Fresco (static WebP)",
+      "kind": "third-party",
+      "version": "3.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fresco=3.7.0 (RN pins it; app has no override seen)",
+        "byte-identical (sha256) to the .so in com.facebook.fresco:webpsupport:3.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fresco:webpsupport:3.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.facebook.fresco:webpsupport:3.7.0 (central)"
+    },
+    {
+      "lib": "libjsi.so",
+      "abi": "arm64-v8a",
+      "size": 412696,
+      "sha256": "5fdfbabeee20b300fc084bc9bddfa55b7a3e46dafc1464a4309cf0c906f6b0eb",
+      "project": "React Native",
+      "kind": "third-party",
+      "version": "0.88.0-rc.3",
+      "confidence": "exact",
+      "evidence": [
+        "build-path string in libappmodules.so: react-android-0.88.0-rc.3-release",
+        "JS bundle constant '0.88.0-rc.3'",
+        "gesturehandler BuildConfig REACT_NATIVE_MINOR_VERSION=88",
+        "byte-identical (sha256) to the .so in com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native",
+        "version": "0.88.0-rc.3"
+      },
+      "binary": {
+        "type": "maven",
+        "coordinate": "com.facebook.react:react-android:0.88.0-rc.3",
+        "repo": "rn",
+        "has_sources_jar": false,
+        "aar_suffix": "-release"
+      },
+      "read_source_at": "package/ReactAndroid and package/ReactCommon inside the npm tarball",
+      "role": "JavaScript Interface (ReactCommon/jsi)",
+      "binary_verified": true,
+      "verified_against": "com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+    },
+    {
+      "lib": "libreact_codegen_rngesturehandler_codegen.so",
+      "abi": "arm64-v8a",
+      "size": 362288,
+      "sha256": "8ed6f375389ee09edcd02bfb4f302a27dc7cb806e1c4bc6760e10b33e88e9d7b",
+      "project": "react-native-gesture-handler codegen",
+      "kind": "third-party",
+      "version": "~3.2.1",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~3.2.1"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-gesture-handler",
+        "version": "3.2.1"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libgifimage.so",
+      "abi": "arm64-v8a",
+      "size": 319088,
+      "sha256": "cfbb51d1fe58ba985ad1f06d4ac0afa70e5323d25517642881f4833d7020e44f",
+      "project": "Fresco (GIF)",
+      "kind": "third-party",
+      "version": "3.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fresco=3.7.0 (RN pins it; app has no override seen)",
+        "byte-identical (sha256) to the .so in com.facebook.fresco:animated-gif:3.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fresco:animated-gif:3.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.facebook.fresco:animated-gif:3.7.0 (central)"
+    },
+    {
+      "lib": "libnative-filters.so",
+      "abi": "arm64-v8a",
+      "size": 277744,
+      "sha256": "bb82aec5ab2a8ac4e1968f41c6477824f1f3fff90c0eeb2c90cdeb1923d69833",
+      "project": "Fresco (native filters)",
+      "kind": "third-party",
+      "version": "3.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fresco=3.7.0 (RN pins it; app has no override seen)",
+        "byte-identical (sha256) to the .so in com.facebook.fresco:nativeimagefilters:3.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fresco:nativeimagefilters:3.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.facebook.fresco:nativeimagefilters:3.7.0 (central)"
+    },
+    {
+      "lib": "libdatadog-ndk.so",
+      "abi": "arm64-v8a",
+      "size": 238504,
+      "sha256": "7229bbe64f40f33f8d12e583595486eaec7e9b32f241c92c36f4b12df5b60f62",
+      "project": "Datadog Android SDK NDK crash reporting",
+      "kind": "third-party",
+      "version": "3.13.1",
+      "confidence": "exact",
+      "evidence": [
+        "com/datadog/android/BuildConfig.SDK_VERSION_NAME = 3.13.1 (same release train as dd-sdk-android-ndk)",
+        "byte-identical (sha256) to the .so in com.datadoghq:dd-sdk-android-ndk:3.13.1 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.datadoghq:dd-sdk-android-ndk:3.13.1",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.datadoghq:dd-sdk-android-ndk:3.13.1 (central)"
+    },
+    {
+      "lib": "libcrashlytics.so",
+      "abi": "arm64-v8a",
+      "size": 231960,
+      "sha256": "d1f4639c66971f821e356e629fcedbba4ad1395ab0e38d0ca3b5070e7283feb7",
+      "project": "Firebase Crashlytics NDK",
+      "kind": "third-party",
+      "version": "20.1.0",
+      "confidence": "exact",
+      "evidence": [
+        "com/google/firebase/crashlytics/ndk/BuildConfig.VERSION_NAME = 20.1.0",
+        "byte-identical (sha256) to the .so in com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.google.firebase:firebase-crashlytics-ndk:20.1.0",
+        "repo": "google",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source; binary only",
+      "binary_verified": true,
+      "verified_against": "com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+    },
+    {
+      "lib": "libcrashlytics-handler.so",
+      "abi": "arm64-v8a",
+      "size": 222056,
+      "sha256": "064bb16f99de2ea43e9c4f5dc3e94f411b96fbed709149b266479774da7f3f7c",
+      "project": "Firebase Crashlytics NDK",
+      "kind": "third-party",
+      "version": "20.1.0",
+      "confidence": "exact",
+      "evidence": [
+        "com/google/firebase/crashlytics/ndk/BuildConfig.VERSION_NAME = 20.1.0",
+        "byte-identical (sha256) to the .so in com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.google.firebase:firebase-crashlytics-ndk:20.1.0",
+        "repo": "google",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source; binary only",
+      "binary_verified": true,
+      "verified_against": "com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+    },
+    {
+      "lib": "libfbjni.so",
+      "abi": "arm64-v8a",
+      "size": 177000,
+      "sha256": "a9e35ba55d3f956920281f519385f8a72475ee24819799cb08375fdd4cce2b22",
+      "project": "fbjni",
+      "kind": "third-party",
+      "version": "0.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fbjni=0.7.0",
+        "byte-identical (sha256) to the .so in com.facebook.fbjni:fbjni:0.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fbjni:fbjni:0.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "role": "JNI helper layer",
+      "binary_verified": true,
+      "verified_against": "com.facebook.fbjni:fbjni:0.7.0 (central)"
+    },
+    {
+      "lib": "libreact_codegen_safeareacontext.so",
+      "abi": "arm64-v8a",
+      "size": 154256,
+      "sha256": "83bcc3083640fc061eb86cb691bf65eac3e08081067efdee66fe1afce6f5a269",
+      "project": "react-native-safe-area-context codegen",
+      "kind": "third-party",
+      "version": "~5.9.1",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~5.9.1"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-safe-area-context",
+        "version": "5.9.1"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libreact_codegen_RNKC.so",
+      "abi": "arm64-v8a",
+      "size": 147976,
+      "sha256": "6830fb6286532734fa7f63d843364d07d81e87bda86b00ed95bcaf4e9920fe7f",
+      "project": "react-native-keyboard-controller codegen",
+      "kind": "third-party",
+      "version": "1.22.4",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists exactly 1.22.4",
+        "BuildConfig shows the lib is present with edge-to-edge on"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-keyboard-controller",
+        "version": "1.22.4"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libhermestooling.so",
+      "abi": "arm64-v8a",
+      "size": 141216,
+      "sha256": "52607cec46d60dbd4d46f41dc9870c55a87051b6d412f02ff71242d97fc45ec6",
+      "project": "Hermes JS engine",
+      "kind": "third-party",
+      "version": "260318099.0.4 (ships with RN 0.88.0-rc.3)",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 sdks/hermes-engine/version.properties HERMES_VERSION_NAME=260318099.0.4",
+        "npm dep hermes-compiler 260318099.0.4",
+        "bundle bytecode version 99",
+        "byte-identical (sha256) to the .so in com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.react:react-android:0.88.0-rc.3",
+        "repo": "rn",
+        "has_sources_jar": false,
+        "aar_suffix": "-release"
+      },
+      "also": {
+        "type": "npm",
+        "package": "hermes-compiler",
+        "version": "260318099.0.4"
+      },
+      "note": "Engine source lives in github.com/facebook/hermes (not reachable from the sandbox at time of analysis); the RN npm tarball only has the glue.",
+      "role": "Hermes tooling/debug support (ships inside react-android AAR)",
+      "binary_verified": true,
+      "verified_against": "com.facebook.react:react-android:0.88.0-rc.3 (rn)"
+    },
+    {
+      "lib": "libexpo-modules-worklets.so",
+      "abi": "arm64-v8a",
+      "size": 115912,
+      "sha256": "27538fb50228b57f487eaeab9215124adb8e1ce5863db471a2e8073e5245ac82",
+      "project": "expo-modules-core (worklets adapter, built by the same package)",
+      "kind": "third-party",
+      "version": "58.0.14",
+      "confidence": "exact",
+      "evidence": [
+        "expo/modules/BuildConfig.EXPO_MODULES_CORE_VERSION = 58.0.14",
+        "CMakeLists in the npm package builds this lib"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "expo-modules-core",
+        "version": "58.0.14"
+      },
+      "read_source_at": "package/android and package/common"
+    },
+    {
+      "lib": "librnscreens.so",
+      "abi": "arm64-v8a",
+      "size": 103928,
+      "sha256": "2e5c463e34a2bf2bb26e502e0c9a03466c7d21c9c72fe6dae5e522e888ba7841",
+      "project": "react-native-screens",
+      "kind": "third-party",
+      "version": "~4.29.0",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~4.29.0",
+        "exact patch not recoverable"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-screens",
+        "version": "4.29.0"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libexpo-updates.so",
+      "abi": "arm64-v8a",
+      "size": 101912,
+      "sha256": "982edd6ad5c745e0d2a02d8b37d9b426a9cc585b11519bc7ae208062ee94137a",
+      "project": "expo-updates",
+      "kind": "third-party",
+      "version": "~58.0.16",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~58.0.16",
+        "app.config updates.url=https://u.expo.dev/..., runtimeVersion 1.32.1",
+        "exact patch not recoverable from the APK"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "expo-updates",
+        "version": "58.0.16"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libgesturehandler.so",
+      "abi": "arm64-v8a",
+      "size": 92000,
+      "sha256": "f22be1f9b406da8bb44afefc6d24d500bd38b5910434b0a25079ceab76792b24",
+      "project": "react-native-gesture-handler",
+      "kind": "third-party",
+      "version": "~3.2.1",
+      "confidence": "range",
+      "evidence": [
+        "expo@58.0.8 bundledNativeModules.json (Expo SDK 58; app.config sdkVersion=58.0.0) lists ~3.2.1",
+        "BuildConfig REACT_NATIVE_MINOR_VERSION=88"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "react-native-gesture-handler",
+        "version": "3.2.1"
+      },
+      "read_source_at": "package/android and package/common (C++ in package/cpp or android/src/main/jni)"
+    },
+    {
+      "lib": "libexpo-modules-jsi.so",
+      "abi": "arm64-v8a",
+      "size": 90520,
+      "sha256": "c4169c47bd7e3e78adbeaf7b68d914a61fb7e2fc4f2a86fd4322e1a944187ca0",
+      "project": "expo-modules-core (modules JSI)",
+      "kind": "third-party",
+      "version": "58.0.14",
+      "confidence": "exact",
+      "evidence": [
+        "expo/modules/BuildConfig.EXPO_MODULES_CORE_VERSION = 58.0.14",
+        "CMakeLists in the npm package builds this lib"
+      ],
+      "source": {
+        "type": "npm",
+        "package": "expo-modules-core",
+        "version": "58.0.14"
+      },
+      "read_source_at": "package/android and package/common"
+    },
+    {
+      "lib": "libfp.so",
+      "abi": "arm64-v8a",
+      "size": 36416,
+      "sha256": "45ad9b24dda17327a301d6c16443c5b9d1b838f89cd888af73b43247af3fe78a",
+      "project": "FingerprintJS Pro Android SDK (device fingerprinting)",
+      "kind": "third-party",
+      "version": "2.11.0",
+      "confidence": "inferred",
+      "evidence": [
+        "string constant \"2.11.0\" in fpjs_pro_internal/component8T18414.java (SDK version default)",
+        "native loader class fpjs_pro_internal/as.java loads 'fp'"
+      ],
+      "source": {
+        "type": "none",
+        "note": "closed source; Maven coordinate not verified"
+      }
+    },
+    {
+      "lib": "libimage_processing_util_jni.so",
+      "abi": "arm64-v8a",
+      "size": 32528,
+      "sha256": "0292b063fafccf734472cbb59588e756c2dbca907c72021ba6fbf126385508a2",
+      "project": "AndroidX CameraX camera-core",
+      "kind": "third-party",
+      "version": "1.6.0",
+      "confidence": "exact",
+      "evidence": [
+        "META-INF/androidx.camera_camera-core.version = 1.6.0",
+        "byte-identical (sha256) to the .so in androidx.camera:camera-core:1.6.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "androidx.camera:camera-core:1.6.0",
+        "repo": "google",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "androidx.camera:camera-core:1.6.0 (google)"
+    },
+    {
+      "lib": "libandroidx.graphics.path.so",
+      "abi": "arm64-v8a",
+      "size": 10096,
+      "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "project": "AndroidX graphics-path",
+      "kind": "third-party",
+      "version": "1.0.1",
+      "confidence": "exact",
+      "evidence": [
+        "META-INF/androidx.graphics_graphics-path.version = 1.0.1",
+        "byte-identical (sha256) to the .so in androidx.graphics:graphics-path:1.0.1 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "androidx.graphics:graphics-path:1.0.1",
+        "repo": "google",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "androidx.graphics:graphics-path:1.0.1 (google)"
+    },
+    {
+      "lib": "libimagepipeline.so",
+      "abi": "arm64-v8a",
+      "size": 8760,
+      "sha256": "1b377992e4256fa9398ec057722f84a359c7d588e570c8a41f51d930c19ece7d",
+      "project": "Fresco (image pipeline)",
+      "kind": "third-party",
+      "version": "3.7.0",
+      "confidence": "exact",
+      "evidence": [
+        "react-native@0.88.0-rc.3 gradle/libs.versions.toml fresco=3.7.0 (RN pins it; app has no override seen)",
+        "byte-identical (sha256) to the .so in com.facebook.fresco:imagepipeline-native:3.7.0 (central)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.facebook.fresco:imagepipeline-native:3.7.0",
+        "repo": "central",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "com.facebook.fresco:imagepipeline-native:3.7.0 (central)"
+    },
+    {
+      "lib": "libdatastore_shared_counter.so",
+      "abi": "arm64-v8a",
+      "size": 7112,
+      "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1",
+      "project": "AndroidX DataStore",
+      "kind": "third-party",
+      "version": "1.1.7",
+      "confidence": "exact",
+      "evidence": [
+        "META-INF/androidx.datastore_datastore-core.version = 1.1.7",
+        "byte-identical (sha256) to the .so in androidx.datastore:datastore-core-android:1.1.7 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "androidx.datastore:datastore-core-android:1.1.7",
+        "repo": "google",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "androidx.datastore:datastore-core-android:1.1.7 (google)"
+    },
+    {
+      "lib": "libsurface_util_jni.so",
+      "abi": "arm64-v8a",
+      "size": 4896,
+      "sha256": "a5c9d1928ea92ec7a94dff8cf666e7739cd734198b9f0ae1d4e28ea3c86516ba",
+      "project": "AndroidX CameraX camera-core",
+      "kind": "third-party",
+      "version": "1.6.0",
+      "confidence": "exact",
+      "evidence": [
+        "META-INF/androidx.camera_camera-core.version = 1.6.0",
+        "byte-identical (sha256) to the .so in androidx.camera:camera-core:1.6.0 (google)"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "androidx.camera:camera-core:1.6.0",
+        "repo": "google",
+        "has_sources_jar": true,
+        "aar_suffix": ""
+      },
+      "binary_verified": true,
+      "verified_against": "androidx.camera:camera-core:1.6.0 (google)"
+    },
+    {
+      "lib": "libcrashlytics-trampoline.so",
+      "abi": "arm64-v8a",
+      "size": 4744,
+      "sha256": "908e549f7a9b02f71ea0a4bcb77dfbf8dbc1123378da8fc384582fc7608159be",
+      "project": "Firebase Crashlytics NDK",
+      "kind": "third-party",
+      "version": "20.1.0",
+      "confidence": "exact",
+      "evidence": [
+        "com/google/firebase/crashlytics/ndk/BuildConfig.VERSION_NAME = 20.1.0"
+      ],
+      "source": {
+        "type": "maven",
+        "coordinate": "com.google.firebase:firebase-crashlytics-ndk:20.1.0",
+        "repo": "google",
+        "has_sources_jar": false,
+        "aar_suffix": ""
+      },
+      "note": "closed source; binary only",
+      "binary_verified": false,
+      "verified_against": "com.google.firebase:firebase-crashlytics-ndk:20.1.0 (google)"
+    }
+  ]
+}
